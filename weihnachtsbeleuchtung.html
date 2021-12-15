@@ -13,34 +13,26 @@
 
                 <div class="sheet">
                     <div class="row">
-                        <div class="cell">
-                            <div data-type="switch" data-device="funkLamp" data-get-on="on" data-get-off="off" data-set-on="on" data-set-off="off"></div>
+                        <div class="display-topcenter top-space-3">
+                            <div data-type="switch" class="height-150" data-device="funkLamp" data-get-on="on" data-get-off="off" data-set-on="on" data-set-off="off"></div>
                         </div>
-                        <div class="cell"></div>
                     </div>
 
-                    <div class="row"></div>
+                    <div class="row">
+                            <div class="top-space-3">Betriebsmodi:</div>
+                    </div>
 
                     <div class="row">
-                        <div class="cell">
-                            <div>Betriebsmodi:</div>
-                        </div>
-                        <div class="cell"></div>
-                    </div>
-                    <div class="row">
-                        <div class="cell">
-                            <div data-type="switch" data-device="funkLampModus" data-icon="fa-power-off" data-set-on="Manuell" data-set-off="Manuell" data-get-on="Manuell" data-get-off="!Manuell"></div>
-                            <div>Manueller Betrieb</div>
-                        </div>
-                        <div class="cell"></div>
+                        <div data-type="switch" data-device="funkLampModus" data-icon="fa-power-off" data-set-on="Manuell" data-set-off="Manuell" data-get-on="Manuell" data-get-off="!Manuell"></div>
+                        <div>Manueller Betrieb</div>
                     </div>
 
                     <div class="row">
                         <div class="cell">
                             <div data-type="switch" data-device="funkLampModus" data-icon="fa-hourglass-half" data-set-on="festeZeit" data-set-off="Manuell" data-get-on="festeZeit" data-get-off="!festeZeit"></div>
-                            <div>Feste Betriebszeiten</div>
+                            <div class="top-space-2">Feste Betriebszeiten</div>
                         </div>
-                        <div class="cell" data-device="FesteBetriebszeit" data-hide-on="off">
+                        <div class="cell left-space-2" data-hide-on="festeZeit:off">
                             <div data-type="label" class="inline">Lichterkette "AN" zwischen 17:00 bis 07:00 Uhr.</div>
                         </div>
                     </div>
@@ -50,7 +42,7 @@
                             <div data-type="switch" data-device="funkLampModus" data-icon="wi wi-horizon" data-set-on="Sonne" data-set-off="Manuell" data-get-on="Sonne" data-get-off="!Sonne"></div>
                             <div>Sonnenuntergang und Sonnenaufgang</div>
                         </div>
-                        <div class="cell" data-device="SonnenuntergangSonnenaufgang" data-hide-on="off">
+                        <div class="cell left-space-2" data-hide-on="Sonne:off">
                             <div>
                                 <div data-type="label" class="inline">Sonnenuntergang-</div> und
                                 <div data-type="label" class="inline">Sonnenaufgang</div>
@@ -69,8 +61,8 @@
                             <div data-type="switch" data-device="funkLampModus" data-icon="wi wi-sunrise" data-set-on="SZeit" data-set-off="Manuell" data-get-on="SZeit" data-get-off="!SZeit"></div>
                             <div>Sonnenzeiten mit gekoppelter Uhrzeit</div>
                         </div>
-                        <div class="cell">
-                            <div class="cell" data-device="SonnenzeitenUhrzeit" data-hide-on="off">
+                        <div class="cell left-space-2">
+                            <div class="cell" data-hide-on="SZeit:off">
                                 <div>
                                     <div data-type="label" class="inline">Sonnenuntergang-</div> und
                                     <div data-type="label" class="inline">Sonnenaufgang</div>
@@ -82,7 +74,7 @@
                                         data-substitution="s/(:00)$//g" class="inline"></div>
                                 </div>
                             </div>
-                            <div class="cell">
+                            <div class="cell top-space-2">
                                 <div>
                                     <div data-type="label" class="inline">Spätestens um 07:30 Uhr Lichterkette "AUS".</div>
                                 </div>
@@ -95,7 +87,7 @@
                             <div data-type="switch" data-device="funkLampModus" data-icon="fa-user-check" data-set-on="Anwesenheit" data-set-off="Manuell" data-get-on="Anwesenheit" data-get-off="!Anwesenheit"></div>
                             <div>Anwesenheit</div>
                         </div>
-                        <div class="cell" data-device="Anwesenheit" data-hide-on="off">
+                        <div class="cell left-space" data-hide-on="Anwesenheit:off">
                             <div>
                                 <div data-type="label" class="inline">Lichterkette "AN" zwischen 17:00 bis 07:00 Uhr bei Anwesenheit.</div>
                             </div>
