@@ -26,14 +26,14 @@
                         <div class="display-topleft top-space-3 left-space-3">
                             <div data-type="label">Windst&auml;rke:
                             </div>
-                            <div data-type="label" data-device="SensorDaten">
+                            <div data-type="label" data-device="SensorDaten" data-get="Windgeschwindigkeit"> 
                             </div>
                         </div>
                         <div class="row">
                             <!--Anzeigen der Windböe-->
                             <div class="display-left top-space-3 left-space-3">
                                 <div data-type="label">Windb&ouml;e:</div>
-                                <div id="Windboe" data-type="label" data-device="SensorDaten">
+                                <div id="Windboe" data-type="label" data-device="SensorDaten" data-get="Böe"> 
                                 </div>
                             </div>
                         </div>
@@ -41,18 +41,18 @@
                 </div>
             </li>
             <li data-row="2" data-col="2" data-sizex="5" data-sizey="5">
-                <Header>Handynummern</Header>
+                <Header>Benutzernamen</Header>
                 <div class="sheet">
                     <div class="row">
                         <div class="cell">
-                            <div class="top-space-2" data-type="label" data-device="Dummy1" data-cmd="attr"
-                                data-get="userattr" id="UserNamen" (hex)="replace(' ','<br>')">
+                            <div class="top-space-2" data-type="label" data-device="SensorDatenFhem_bot" data-cmd="attr"
+                                data-get="defaultPeer" id="UserNamen" >
                             </div>
                         </div>
                         <div class="cell">
-                            <!--Anpassen mit Ion zusammen-->
-                            <div data-type="input" data-device="Dummy1" data-get="userattr"
-                               data-cmd="attr" ></div>
+                            <!--Telegrammnamen anzeigen-->
+                            <div data-type="input" data-device="SensorDatenFhem_bot" data-cmd="attr" data-get="defaultPeer"
+                                ></div>
                             
                         </div>
                     </div>
