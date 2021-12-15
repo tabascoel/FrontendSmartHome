@@ -51,15 +51,15 @@
                             <div data-type="switch" data-device="funkLampModus" data-icon="wi wi-horizon" data-set-on="Sonne" data-set-off="Manuell" data-get-on="Sonne" data-get-off="!Sonne"></div>
                             <div>Sonnenuntergang und Sonnenaufgang</div>
                         </div>
-                        <div class="col" data-get="Sonne" data-hide-on="off">
+                        <div class="col" data-device="funkLampModus" data-hide-off="Sonne">
                             <div>
-                                <div data-type="label" class="inline">Sonnenuntergang-</div> und
-                                <div data-type="label" class="inline">Sonnenaufgang</div>
+                                <div data-type="label" class="inline">Nächster Sonnenuntergang-</div> und
+                                <div data-type="label" class="inline">-aufgang</div>
                             </div>
                             <div >
                                 <div data-type="label" data-device="doif_sonne" data-get="timer_01_c01"
                                     data-substitution="s/(:00)$//g" class="inline"></div>
-                                <div data-type="label" data-device="Sonne" data-get="timer_02_c02"
+                                <div data-type="label" data-device="doif_sonne" data-get="timer_02_c02"
                                     data-substitution="s/(:00)$//g" class="inline"></div>
                             </div>
                         </div>
