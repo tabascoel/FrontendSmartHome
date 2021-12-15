@@ -2,14 +2,111 @@
 <html>
 
 <head></head>
+
 <body>
     <div class="gridster">
         <ul>
             <li data-row="1" data-col="1" data-sizex="2" data-sizey="10" data-template="menu.html"></li>
-            <li data-row="1" data-col="2" data-sizex="5" data-sizey="10"><Header>Weihnachtsbeleuchtung</header></li>
-            <li data-row="1" data-col="3" data-sizex="5" data-sizey="10"><Header>Zweites Widget</Header></li>
-            
+
+            <li data-row="1" data-col="2" data-sizex="5" data-sizey="10">
+                <Header>Funksteckdose</header>
+
+                <div class="sheet">
+                    <div class="row">
+                        <div class="cell">
+                            <div data-type="switch" datadata-device="Funksteckdose"
+                                 data-states='["on","off"]' data-get-on="on" data-get-off="off" class="readonly"></div>
+                        </div>
+                        <div class="cell">
+                            <div data-type="switch" data-device="Funksteckdose" data-set-on="on" data-set-off="off" data-icon="fa-power-off">
+                                <div data-type="label" data-device="Funksteckdose">
+                                </div>
+                            </div>
+                            <div>AN / AUS</div>
+                        </div>
+                    </div>
+
+                    <div class="row"></div>
+
+                    <div class="row">
+                        <div class="cell">
+                            <div>Betriebsmodi:</div>
+                        </div>
+                        <div class="cell"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            <div data-type="switch" data-device="FesteBetriebszeit" data-icon="fa-hourglass-half" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
+                            <div>Feste Betriebszeiten</div>
+                        </div>
+                        <div class="cell" data-device="FesteBetriebszeit" data-hide-on="off">
+                            <div data-type="label" class="inline">Lichterkette "AN" zwischen 17:00 bis 07:00 Uhr.</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            <div data-type="switch" data-device="SonnenuntergangSonnenaufgang" data-icon="wi wi-horizon" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
+                            <div>Sonnenuntergang und Sonnenaufgang</div>
+                        </div>
+                        <div class="cell" data-device="SonnenuntergangSonnenaufgang" data-hide-on="off">
+                            <div>
+                                <div data-type="label" class="inline">Sonnenuntergang-</div> und
+                                <div data-type="label" class="inline">Sonnenaufgang</div>
+                            </div>
+                            <div >
+                                <div data-type="label" data-device="Sonnenuntergang" data-get="sunset"
+                                    data-substitution="s/(:00)$//g" class="inline"></div>
+                                <div data-type="label" data-device="Sonnenaufgang" data-get="sunrise"
+                                    data-substitution="s/(:00)$//g" class="inline"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            <div data-type="switch" data-device="SonnenzeitenUhrzeit" data-icon="wi wi-sunrise" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
+                            <div>Sonnenzeiten mit gekoppelter Uhrzeit</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell" data-device="SonnenzeitenUhrzeit" data-hide-on="off">
+                                <div>
+                                    <div data-type="label" class="inline">Sonnenuntergang-</div> und
+                                    <div data-type="label" class="inline">Sonnenaufgang</div>
+                                </div>
+                                <div>
+                                    <div data-type="label" data-device="Sonnenuntergang" data-get="sunset"
+                                        data-substitution="s/(:00)$//g" class="inline"></div>
+                                    <div data-type="label" data-device="Sonnenaufgang" data-get="sunrise"
+                                        data-substitution="s/(:00)$//g" class="inline"></div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div>
+                                    <div data-type="label" class="inline">Spätestens um 07:30 Uhr Lichterkette "AUS".</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            <div data-type="switch" data-device="Anwesenheit" data-icon="fa-user-check" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
+                            <div>Anwesenheit</div>
+                        </div>
+                        <div class="cell" data-device="Anwesenheit" data-hide-on="off">
+                            <div>
+                                <div data-type="label" class="inline">Lichterkette "AN" zwischen 17:00 bis 07:00 Uhr bei Anwesenheit.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-row="1" data-col="3" data-sizex="5" data-sizey="10"></li>
         </ul>
     </div>
 </body>
+
 </html>
