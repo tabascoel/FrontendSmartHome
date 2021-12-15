@@ -23,20 +23,21 @@
                 <div class="sheet">
                     <div class="row">
                         <!--Anzeigen der Windstärke-->
-                        <div class="display-topleft top-space-3 left-space-3">
+                        <div class="cell display-topleft top-space-3 left-space-3">
                             <div data-type="label">Windst&auml;rke:
                             </div>
-                            <div data-type="label" data-device="SensorDaten" data-get="Windgeschwindigkeit"> 
+                            <div class="cell" data-type="label" data-device="SensorDaten" data-get="Windgeschwindigkeit"> 
                             </div>
                         </div>
-                        <div class="row">
+                       
                             <!--Anzeigen der Windböe-->
-                            <div class="display-left top-space-3 left-space-3">
+                            <div class="cell display-left top-space-3 left-space-3">
                                 <div data-type="label">Windb&ouml;e:</div>
-                                <div id="Windboe" data-type="label" data-device="SensorDaten" data-get="Böe"> 
+
+                                <div class="cell" id="Windboe" data-type="label" data-device="SensorDaten" data-get="Böe"> 
                                 </div>
                             </div>
-                        </div>
+                        
                     </div>
                 </div>
             </li>
@@ -51,8 +52,8 @@
                         </div>
                         <div class="cell">
                             <!--Telegrammnamen anzeigen-->
-                            <div data-type="input" data-device="SensorDatenFhem_bot" data-cmd="attr" data-get="defaultPeer"
-                                ></div>
+                            <div data-type="input" data-device="SensorDatenFhem_bot" data-cmd="attr" data-get="defaultPeer" data-set="defaultPeer"
+                                class="right-space-3"></div>
                             
                         </div>
                     </div>
