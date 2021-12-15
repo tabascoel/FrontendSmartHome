@@ -47,7 +47,7 @@
                             <div>Feste Betriebszeiten</div>
                         </div>
                         <div class="col">
-                            <div data-type="label" data-device="funkLampModus" data-hide-on="!festeZeit" class="inline">Lichterkette "AN" zwischen 17:00 bis 07:00 Uhr.</div>
+                            <div data-type="label" data-device="funkLampModus" data-hide-on="!festeZeit" data-hide-off="festeZeit" class="inline">Lichterkette zwischen 17:00 bis 07:00 Uhr "AN".</div>
                         </div>
                     </div>
 
@@ -60,20 +60,20 @@
                         </div>
                         <div class="col">
                             <div>
-                                <div data-type="label" class="inline" data-device="doif_sonne" data-hide-on="!off">
+                                <div data-type="label" class="inline" data-device="doif_sonne" data-hide-on="!on" data-hide-off="on">
                                     Nächster Sonnenaufgang:</div>
                             </div>
                             <div>
-                                <div data-type="label" data-device="doif_sonne" data-hide-on="!off"
+                                <div data-type="label" data-device="doif_sonne" data-hide-on="!on" data-hide-off="on"
                                     data-get="timer_02_c02" data-substitution="s/(:00)$//g" class="inline"></div>
                             </div>
                             <div>
                                 <div data-type="label" class="inline top-space-2" data-device="doif_sonne"
-                                    data-hide-on="!off">Nächster Sonnenuntergang:</div>
+                                    data-hide-on="!on" data-hide-off="on">Nächster Sonnenuntergang:</div>
                             </div>
                             <div>
                                 <div data-type="label" data-device="doif_sonne" data-get="timer_01_c01"
-                                    data-hide-on="!off" data-substitution="s/(:00)$//g" class="inline"></div>
+                                    data-hide-on="!on" data-hide-off="on" data-substitution="s/(:00)$//g" class="inline"></div>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             </div>
                             <div>Sonnenzeiten mit gekoppelter Uhrzeit</div>
                         </div>
-                        <div class="col" data-device="doif_SZeit" data-hide-on="!off">
+                        <div class="col" data-device="doif_SZeit" data-hide-on="!on" data-hide-off="on">
 
                             <div>
                                 <div data-type="label" class="inline">Nächster Sonnenaufgang</div>
@@ -115,7 +115,7 @@
                                 data-get-off="!Anwesenheit"></div>
                             <div>Anwesenheit</div>
                         </div>
-                        <div class="col" data-device="funkLampModus" data-hide-on="!Anwesenheit">
+                        <div class="col" data-device="funkLampModus" data-hide-on="!Anwesenheit" data-hide-off="Anwesenheit">
                             <div>
                                 <div data-type="label" class="inline">Lichterkette "AN" zwischen 17:00 bis 07:00 Uhr bei
                                     Anwesenheit.</div>
