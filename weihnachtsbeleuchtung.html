@@ -14,12 +14,12 @@
                 <div class="sheet">
                     <div class="row">
                         <div class="cell">
-                            <div data-type="symbol" data-device="funkLamp"
+                            <div data-type="symbol" data-icon="" data-device="funkLamp"
                                  data-states='["on","off"]' data-get-on="on" data-get-off="off" data-on-backround-color="red"></div>
                         </div>
                         <div class="cell">
-                            <div data-type="switch" data-device="funkLamp" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"data-icon="fa-power-off">
-                                <div data-type="label" data-device="Funksteckdose">
+                            <div data-type="switch" data-device="funkLamp" data-set-on="" data-set-off="off" data-get-on="on" data-get-off="off"data-icon="fa-power-off">
+                                <div data-type="label" data-device="funkLamp">
                                 </div>
                             </div>
                             <div>AN / AUS</div>
@@ -37,7 +37,7 @@
 
                     <div class="row">
                         <div class="cell">
-                            <div data-type="switch" data-device="FesteBetriebszeit" data-icon="fa-hourglass-half" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
+                            <div data-type="switch" data-device="funkLampModus" data-icon="fa-hourglass-half" data-fhem-cmd='IF ([festeZeit:state] eq "off") (set funkLampModus switch festeZeit) ELSE (set funkLampModus off)'></div>></div>
                             <div>Feste Betriebszeiten</div>
                         </div>
                         <div class="cell" data-device="FesteBetriebszeit" data-hide-on="off">
@@ -47,7 +47,7 @@
 
                     <div class="row">
                         <div class="cell">
-                            <div data-type="switch" data-device="SonnenuntergangSonnenaufgang" data-icon="wi wi-horizon" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
+                            <div data-type="switch" data-device="Sonne" data-icon="wi wi-horizon" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
                             <div>Sonnenuntergang und Sonnenaufgang</div>
                         </div>
                         <div class="cell" data-device="SonnenuntergangSonnenaufgang" data-hide-on="off">
@@ -66,7 +66,7 @@
 
                     <div class="row">
                         <div class="cell">
-                            <div data-type="switch" data-device="SonnenzeitenUhrzeit" data-icon="wi wi-sunrise" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
+                            <div data-type="switch" data-device="SonneZeit" data-icon="wi wi-sunrise" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"></div>
                             <div>Sonnenzeiten mit gekoppelter Uhrzeit</div>
                         </div>
                         <div class="cell">
