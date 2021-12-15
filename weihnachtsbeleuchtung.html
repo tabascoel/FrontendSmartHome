@@ -18,7 +18,7 @@
                                  data-states='["on","off"]' data-get-on="on" data-get-off="off" data-on-backround-color="red"></div>
                         </div>
                         <div class="cell">
-                            <div data-type="switch" data-device="funkLamp" data-set-on="on" data-get-off="off" data-get-on="on" data-get-off="off" data-fhem-cmd="set funkLampModus Manuell">
+                            <div data-type="switch" data-device="funkLamp" data-set-on="on" data-get-off="off" data-get-on="on" data-get-off="off" data-fhem-cmd='(set funkLampModus Manuell) IF ([funkLamp:state] eq "off") ()(set funkLamp on) ELSE (set funkLamp off)'>
                             </div>
                             <div>AN / AUS</div>
                         </div>
