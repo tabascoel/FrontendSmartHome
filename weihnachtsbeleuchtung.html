@@ -14,11 +14,10 @@
                 <div class="sheet">
                     <div class="row">
                         <div class="cell">
-                            <div data-type="symbol" data-device="funkLamp" 
-                                 data-states='["on","off"]' data-get-on="on" data-get-off="off" data-on-backround-color="red"></div>
+                            <div data-type="switch" data-device="funkLamp" data-get-on="on" data-get-off="off" data-set-on="on" data-set-off="off"></div>
                         </div>
                         <div class="cell">
-                            <div data-type="switch" data-device="funkLamp" data-get-on="on" data-get-off="off" data-set-on="on" data-set-off="off">
+                            
                             </div>
                             <div>AN / AUS</div>
                         </div>
@@ -31,6 +30,15 @@
                             <div>Betriebsmodi:</div>
                         </div>
                         <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <div data-type="switch" data-device="funkLampModus" data-icon="fa-hourglass-half" data-set-on="Manuell" data-set-off="Manuell" data-get-on="Manuell" data-get-off="!Manuell"></div>
+                            <div>Manueller Betrieb</div>
+                        </div>
+                        <div class="cell" data-device="FesteBetriebszeit" data-hide-on="off">
+                            <div data-type="label" class="inline">Lichterkette "AN" zwischen 17:00 bis 07:00 Uhr.</div>
+                        </div>
                     </div>
 
                     <div class="row">
