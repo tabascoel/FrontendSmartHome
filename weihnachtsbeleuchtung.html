@@ -18,9 +18,7 @@
                                  data-states='["on","off"]' data-get-on="on" data-get-off="off" data-on-backround-color="red"></div>
                         </div>
                         <div class="cell">
-                            <div data-type="switch" data-device="funkLamp" data-set-on="" data-set-off="off" data-get-on="on" data-get-off="off"data-icon="fa-power-off">
-                                <div data-type="label" data-device="funkLamp">
-                                </div>
+                            <div data-type="switch" data-device="funkLamp" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off" data-icon="fa-power-off">
                             </div>
                             <div>AN / AUS</div>
                         </div>
@@ -37,7 +35,7 @@
 
                     <div class="row">
                         <div class="cell">
-                            <div data-type="switch" data-device="funkLampModus" data-icon="fa-hourglass-half" data-fhem-cmd='IF ([festeZeit:state] eq "off") (set funkLampModus switch festeZeit) ELSE (set funkLampModus off)'></div>
+                            <div data-type="switch" data-device="funkLampModus" data-icon="fa-hourglass-half"></div>
                             <div>Feste Betriebszeiten</div>
                         </div>
                         <div class="cell" data-device="FesteBetriebszeit" data-hide-on="off">
