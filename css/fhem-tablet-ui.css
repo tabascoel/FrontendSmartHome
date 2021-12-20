@@ -2749,10 +2749,10 @@ img.mini,
 }
 
 [data-type="pagetab"] .label {
-    font-size: 50% !important;
+    font-size: 100% !important;
     white-space: nowrap;
-    padding-top: 2em;
-    color: #8C8C8C;
+    padding-top: 1em;
+    color: #8c8c8c;
 }
 
 .labelright[data-type="pagetab"] .label {
