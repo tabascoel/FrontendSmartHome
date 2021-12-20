@@ -22,8 +22,8 @@
                 <div class="sheet">
 
                     <!-- Row 1 - Lichterkettenstatus und Manuelle Bedienung-->
-                    <div class="row">
-                        <div class="cell top-space-4">
+                    <div class="row-30">
+                        <div class="cell">
 
                             <!-- Switchdevice zur Darstellung des Lichterkettenstatus sowie zur manuellen Bedienung -->
                             <div data-type="switch" style="font-size: xx-large;" data-device="funkLamp" data-get-on="on"
@@ -35,7 +35,9 @@
                     <div class="row">
                         <div class="sheet">
                             <div class="row">
-                                <div class="cell">Betriebsmodi:</div>
+                                <div class="cell">
+                                    <div data-type="label">Betriebsmodi:</div>
+                                </div>
                                 <div class="cell"></div>
                             </div>
 
@@ -48,7 +50,7 @@
                                     <div data-type="switch" data-device="funkLampModus" data-icon="fa-power-off"
                                         data-set-on="Manuell" data-set-off="Manuell" data-get-on="Manuell"
                                         data-get-off="!Manuell"></div>
-                                    <div>Manueller Betrieb</div>
+                                    <div data-type="label">Manueller Betrieb</div>
                                 </div>
                                 <div class="cell"></div>
                             </div>
@@ -61,12 +63,12 @@
                                     <div data-type="switch" data-device="funkLampModus" data-icon="fa-hourglass-half"
                                         data-set-on="festeZeit" data-set-off="Manuell" data-get-on="festeZeit"
                                         data-get-off="!festeZeit"></div>
-                                    <div>Feste Betriebszeiten</div>
+                                    <div data-type="label">Feste Betriebszeiten</div>
                                 </div>
 
                                 <!-- Widget Label zur Definition des Modus -->
                                 <div class="cell">
-                                    <div data-type="label" data-get="funkLampModus" data-hide-on="!festeZeit"
+                                    <div data-type="label" data-device="funkLampModus" data-get="funkLampModus" data-hide-on="!festeZeit"
                                         data-hide-off="festeZeit" class="inline ">Lichterkette zwischen 17:00 bis 07:00
                                         Uhr
                                         "AN".
@@ -83,7 +85,7 @@
                                         data-set-on="Sonne" data-set-off="Manuell" data-get-on="Sonne"
                                         data-get-off="!Sonne" data-hide="funkLampModus">
                                     </div>
-                                    <div>Sonnenuntergang und Sonnenaufgang</div>
+                                    <div data-type="label">Sonnenuntergang und Sonnenaufgang</div>
                                 </div>
 
                                 <!-- Widget Label zur Definition des Modus -->
@@ -123,7 +125,7 @@
                                         data-set-on="SZeit" data-set-off="Manuell" data-get-on="SZeit"
                                         data-get-off="!SZeit">
                                     </div>
-                                    <div>Sonnenzeiten mit gekoppelter Uhrzeit</div>
+                                    <div data-type="label">Sonnenzeiten mit gekoppelter Uhrzeit</div>
                                 </div>
 
                                 <!-- Widget Label zur Definition des Modus -->
@@ -164,9 +166,9 @@
                                 </div>
 
                                 <!-- Widget Label zur Definition des Modus -->
-                                <div class="cell" data-get="funkLampModus" data-hide-on="!Anwesenheit"
-                                    data-hide-off="Anwesenheit" data-hide="Anwesenheit">
-                                    <div data-type="label" class="inline" data-hide-on="">Lichterkette zwischen 17:00
+                                <div class="cell">
+                                    <div data-type="label" class="inline" data-get="funkLampModus" data-hide-on="!Anwesenheit"
+                                    data-hide-off="Anwesenheit" data-hide="Anwesenheit">Lichterkette zwischen 17:00
                                         bis 07:00 Uhr
                                         bei
                                         Anwesenheit "AN".</div>
