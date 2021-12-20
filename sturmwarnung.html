@@ -23,21 +23,25 @@
                 <Header>Wetterwerte</header>
                 <!-- Sheet Grundgerüst zur Aufteilung in Rows und Cells -->
                 <div class="sheet">
+                    <!--Row 1 Windgeschwindigkeit-->
                     <div class="row">
-                        <!--Label Widget anzeigen der aktuellen Windstärke-->
                             <div class="cell left-align left-space-2" data-type="label">Windgeschwindigkeit:</div>
-                        <!--Label Widget für die Windböe-->
+                        <!--Label Widget anzeigen der aktuellen Windstärke-->
                         <div class="cell center-align" data-type="label" data-device="SensorDaten"
                             data-get="Windgeschwindigkeit"> 
                         </div>
                     </div>
+                    <!--Row 2 Windrichtung-->
                     <div class="row">
-                            <div class="cell left-align left-space-2" data-type="label">Windrichtung</div>
+                            <div class="cell left-align left-space-2" data-type="label">Windrichtung:</div>
+                            <!--Label Widget anzeigen der Windrichtung-->
                             <div class="cell center-align" data-type="label" data-device="SensorDaten" data-get="Windrichtung">
                             </div>
                     </div>
+                    <!--Row 3 Windböe-->
                     <div class="row">
                             <div class="cell left-align left-space-2" data-type="label">Windb&ouml;e:</div>
+                            <!--Label Widget anzeigen der Windböe-->
                             <div class="cell center-align" data-type="label" data-device="SensorDaten" data-get="Böe">
                             </div>
                     </div>
@@ -51,19 +55,17 @@
                     <div class="row">
                         <div class="cell">
                             <!--Label Widget zum anzeigen der Telegrammnamen-->
-                            <div class="top-space-2" data-type="label" data-device="SensorDatenFhem_bot" data-cmd="attr"
+                            <div class="top-space-2" data-type="label" data-device="SturmwetterwarnungFHEM_bot" data-cmd="attr"
                                 data-get="defaultPeer" id="UserNamen">
                             </div>
                         </div>
                         <div class="cell">
                             <!--Input Widget umd die Telegrammnamen zu ändern-->
-                            <div data-type="input" data-device="SensorDatenFhem_bot" data-cmd="attr"
+                            <div data-type="input" data-device="SturmwetterwarnungFHEM_bot" data-cmd="attr"
                                 data-get="defaultPeer" data-set="defaultPeer" class="right-space-3"></div>
-
                         </div>
                     </div>
             </li>
-
             <!--Widget Strumschwellwerte-->
             <li data-row="2" data-col="3" data-sizex="5" data-sizey="5">
                 <Header>Sturmschwellwerte</header>
@@ -110,5 +112,4 @@
         </ul>
     </div>
 </body>
-
 </html>
