@@ -8,12 +8,12 @@
         <ul>
             <li data-row="1" data-col="1" data-sizex="2" data-sizey="10" data-template="menu.html"></li>
             <!--Widget fürs Einfache Heizen-->
-            <li data-row="1" data-col="2" data-sizex="4" data-sizey="6">
+            <li data-row="1" data-col="2" data-sizex="5" data-sizey="5">
                 <Header>Einfaches Heizen</Header>
 
             </li>
             <!--Widget fürs Optimierte Heizen-->
-            <li data-row="1" data-col="3" data-sizex="4" data-sizey="6">
+            <li data-row="1" data-col="3" data-sizex="5" data-sizey="5">
                 <Header>Optimiertes Heizen</header>
                 <!--Switchdevice zur Einstellung der Sturmwarnung-->
                 <div class="sheet">
@@ -54,70 +54,84 @@
                         <div class="cell-20">
                             <div data-type="switch" style="font-size: large;"></div>
                         </div>
-                        <div class="cell top-space-2">
-                            <div data-type="label">Betriebsmodi:</div>
+                        <div class="cell">
                             <div class="sheet">
-                                <div class="row">
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Manueller Betrieb</div>
-                                    </div>
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Feste Betriebszeit</div>
-                                    </div>
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Tabellenkonfiguration</div>
-                                    </div>
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Schwellwert</div>
+                                <div class="row-20">
+                                    <div class="cell">
+                                        <div data-type="label">Betriebsmodi:</div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell center-align"></div>
-                                    <div class="cell center-align">
-                                        <div data-type="label">Zeitraum festlegen:</div>
+                                    <div class="cell">
                                         <div class="sheet">
-                                            <div class="row">
-                                                <div class="cell">
-                                                    <div class="inline" data-type="datetimepicker"
-                                                        data-timepicker="false" data-device='dummy1' data-theme="normal"
-                                                        data-format="d-m-Y" data-set-value="time_stamp_01"></div>
+                                            <div class="row-">
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Manueller Betrieb</div>
                                                 </div>
-                                                <div class="cell">
-                                                    <div class="inline" data-type="label">-</div>
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Feste Betriebszeit</div>
                                                 </div>
-                                                <div class="cell">
-                                                    <div class="inline" data-type="datetimepicker"
-                                                        data-timepicker="false" data-device='dummy1' data-theme="normal"
-                                                        data-format="d-m-Y" data-set-value="time_stamp_02"></div>
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Tabellenkonfiguration</div>
+                                                </div>
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Schwellwert</div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="popup" data-height="50px" data-width="150px">
-                                            <div>Hier klicken um die Stromwertetabelle zu öffnen</div>
-                                            <div class="dialog">
-                                                <header>Stromwertetabelle</header>
-                                                <div>Inhalt des Popups</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label">Wasserboiler einschalten bei:</div>
-                                        <div class="sheet">
                                             <div class="row">
-                                                <div class="cell-33 right-align inline">
-                                                    <div data-type="label" style="margin-right: 10px;">></div>
+                                                <div class="cell center-align"></div>
+                                                <div class="cell center-align">
+                                                    <div data-type="label">Zeitraum festlegen:</div>
+                                                    <div class="sheet">
+                                                        <div class="row">
+                                                            <div class="cell">
+                                                                <div class="inline" data-type="datetimepicker"
+                                                                    data-timepicker="false" data-device='dummy1'
+                                                                    data-theme="normal" data-format="d-m-Y"
+                                                                    data-set-value="time_stamp_01"></div>
+                                                            </div>
+                                                            <div class="cell">
+                                                                <div class="inline" data-type="label">-</div>
+                                                            </div>
+                                                            <div class="cell">
+                                                                <div class="inline" data-type="datetimepicker"
+                                                                    data-timepicker="false" data-device='dummy1'
+                                                                    data-theme="normal" data-format="d-m-Y"
+                                                                    data-set-value="time_stamp_02"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="cell-33 inline">
-                                                    <div data-type="input"></div>
+                                                <div class="cell">
+                                                    <div data-type="popup" data-height="50px" data-width="150px">
+                                                        <div>Hier klicken um die Stromwertetabelle zu öffnen</div>
+                                                        <div class="dialog">
+                                                            <header>Stromwertetabelle</header>
+                                                            <div>Inhalt des Popups</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="cell left-align inline">
-                                                    <div data-type="label" style="margin-left: 10px;">Watt</div>
+                                                <div class="cell">
+                                                    <div data-type="label">Wasserboiler einschalten bei:</div>
+                                                    <div class="sheet">
+                                                        <div class="row">
+                                                            <div class="cell-33 right-align inline">
+                                                                <div data-type="label" style="margin-right: 10px;">>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell-33 inline">
+                                                                <div data-type="input"></div>
+                                                            </div>
+                                                            <div class="cell left-align inline">
+                                                                <div data-type="label" style="margin-left: 10px;">Watt
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -127,7 +141,6 @@
                         </div>
                     </div>
                 </div>
-
             </li>
 
             <!-- Widget Stromdaten -->
