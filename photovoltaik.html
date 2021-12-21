@@ -8,12 +8,12 @@
         <ul>
             <li data-row="1" data-col="1" data-sizex="2" data-sizey="10" data-template="menu.html"></li>
             <!--Widget fürs Einfache Heizen-->
-            <li data-row="1" data-col="2" data-sizex="4" data-sizey="6">
+            <li data-row="1" data-col="2" data-sizex="5" data-sizey="5">
                 <Header>Einfaches Heizen</Header>
 
             </li>
             <!--Widget fürs Optimierte Heizen-->
-            <li data-row="1" data-col="3" data-sizex="4" data-sizey="6">
+            <li data-row="1" data-col="3" data-sizex="5" data-sizey="5">
                 <Header>Optimiertes Heizen</header>
                 <!--Switchdevice zur Einstellung der Sturmwarnung-->
                 <div class="sheet">
@@ -44,78 +44,117 @@
                     </div>
                 </div>
             </li>
+
+            <!-- Widget Warmwasserboiler-->
             <li data-row="2" data-col="2" data-sizex="6" data-sizey="5">
                 <Header>Warmwasserboiler</Header>
 
+                <!-- Status Warmwasserboiler & Manuelle Bedienung -->
                 <div class="sheet">
                     <div class="row">
                         <div class="cell-20">
                             <div data-type="switch" style="font-size: large;"></div>
                         </div>
-                        <div class="cell top-space-2">
-                            <div data-type="label">Betriebsmodi:</div>
+                        <div class="cell">
+
+                            <!-- Betriebsmodi Überschrift -->
                             <div class="sheet">
-                                <div class="row">
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Manueller Betrieb</div>
-                                    </div>
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Feste Betriebszeit</div>
-                                    </div>
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Tabellenkonfiguration</div>
-                                    </div>
-                                    <div class="cell center-align">
-                                        <div data-type="switch"></div>
-                                        <div data-type="label">Schwellwert</div>
+                                <div class="row-20">
+                                    <div class="cell">
+                                        <div data-type="label">Betriebsmodi:</div>
                                     </div>
                                 </div>
+
+                                <!-- Betriebsmodi: -->
                                 <div class="row">
-                                    <div class="cell center-align"></div>
-                                    <div class="cell center-align">
-                                        <div data-type="label">Zeitraum festlegen:</div>
+                                    <div class="cell">
                                         <div class="sheet">
-                                            <div class="row">
-                                                <div class="cell">
-                                                    <div class="inline" data-type="datetimepicker"
-                                                        data-timepicker="false" data-device='dummy1' data-theme="normal"
-                                                        data-format="d-m-Y" data-set-value="time_stamp_01"></div>
+                                            <div class="row-">
+
+                                                <!-- Betriebsmodus: Manueller Betrieb -->
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Manueller Betrieb</div>
                                                 </div>
-                                                <div class="cell">
-                                                    <div class="inline" data-type="label">-</div>
+
+                                                <!-- Betriebsmodus: Feste Betriebszeit -->
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Feste Betriebszeit</div>
                                                 </div>
-                                                <div class="cell">
-                                                    <div class="inline" data-type="datetimepicker"
-                                                        data-timepicker="false" data-device='dummy1' data-theme="normal"
-                                                        data-format="d-m-Y" data-set-value="time_stamp_02"></div>
+
+                                                <!-- Betriebsmodus: Tabellenkonfiguration -->
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Tabellenkonfiguration</div>
+                                                </div>
+
+                                                <!-- Betriebsmodus: Schwellwert -->
+                                                <div class="cell center-align">
+                                                    <div data-type="switch"></div>
+                                                    <div data-type="label">Schwellwert</div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="popup" data-height="50px" data-width="150px">
-                                            <div>Hier klicken um die Stromwertetabelle zu öffnen</div>
-                                            <div class="dialog">
-                                                <header>Stromwertetabelle</header>
-                                                <div>Inhalt des Popups</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label">Wasserboiler einschalten bei:</div>
-                                        <div class="sheet">
+
+                                            <!-- Informationen und Daten zu den Betriebsmodi -->
                                             <div class="row">
-                                                <div class="cell-33 right-align inline">
-                                                    <div data-type="label" style="margin-right: 10px;">></div>
+
+                                                <!-- Beschreibung Betriebsmodus: Manueller Betrieb -->
+                                                <div class="cell center-align"></div>
+
+                                                <!-- Beschreibung Betriebsmodus: Feste Betriebszeit -->
+                                                <div class="cell center-align">
+                                                    <div data-type="label">Zeitraum festlegen:</div>
+                                                    <div class="sheet">
+                                                        <div class="row">
+                                                            <div class="cell">
+                                                                <div class="inline" data-type="datetimepicker"
+                                                                    data-timepicker="false" data-device='dummy1'
+                                                                    data-theme="normal" data-format="d-m-Y"
+                                                                    data-set-value="time_stamp_01"></div>
+                                                            </div>
+                                                            <div class="cell">
+                                                                <div class="inline" data-type="label">-</div>
+                                                            </div>
+                                                            <div class="cell">
+                                                                <div class="inline" data-type="datetimepicker"
+                                                                    data-timepicker="false" data-device='dummy1'
+                                                                    data-theme="normal" data-format="d-m-Y"
+                                                                    data-set-value="time_stamp_02"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="cell-33 inline">
-                                                    <div data-type="input"></div>
+
+                                                <!-- Beschreibung Betriebsmodus: Stromwertetabelle -->
+                                                <div class="cell">
+                                                    <div data-type="popup" data-height="50px" data-width="150px">
+                                                        <div>Hier klicken um die Stromwertetabelle zu öffnen</div>
+                                                        <div class="dialog">
+                                                            <header>Stromwertetabelle</header>
+                                                            <div>Inhalt des Popups</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="cell left-align inline">
-                                                    <div data-type="label" style="margin-left: 10px;">Watt</div>
+
+                                                <!-- Beschreibung Betriebsmodus: Schwellwert -->
+                                                <div class="cell">
+                                                    <div data-type="label">Wasserboiler einschalten bei:</div>
+                                                    <div class="sheet">
+                                                        <div class="row">
+                                                            <div class="cell-33 right-align inline">
+                                                                <div data-type="label" style="margin-right: 10px;">>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell-33 inline">
+                                                                <div data-type="input"></div>
+                                                            </div>
+                                                            <div class="cell left-align inline">
+                                                                <div data-type="label" style="margin-left: 10px;">Watt
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,16 +164,18 @@
                         </div>
                     </div>
                 </div>
-
             </li>
 
             <!-- Widget Stromdaten -->
             <li data-row="2" data-col="3" data-sizex="4" data-sizey="5">
                 <Header>Stromdaten</Header>
 
+                <!-- Stromdatentabelle -->
                 <div class="sheet">
                     <div class="row">
                         <div class="cell center-align">
+
+                            <!-- Aktuelle produzierter Strom -->
                             <div class="sheet">
                                 <div class="row">
                                     <div class="cell-80">
@@ -149,6 +190,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktueller und Vorhergehender Tag -->
                                 <div class="row">
                                     <div class="cell ">
                                         <div data-type="label">Aktueller Tag:</div>
@@ -164,6 +206,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktuelle und Vorhergehende Woche -->
                                 <div class="row">
                                     <div class="cell">
                                         <div data-type="label">Aktuelle Woche:</div>
@@ -179,6 +222,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktueller und Vorhergehender Monat -->
                                 <div class="row">
                                     <div class="cell">
                                         <div data-type="label">Aktueller Monat:</div>
@@ -194,6 +238,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktuelles und Vorhergehendes Jahr -->
                                 <div class="row">
                                     <div class="cell">
                                         <div data-type="label">Aktuelles Jahr:</div>
@@ -211,6 +256,7 @@
                             </div>
                         </div>
 
+                        <!-- Aktualisierungsintervall für die Stromdatentabelle -->
                         <div class="cell">
                             <div class="sheet">
                                 <div class="row-10">
@@ -229,14 +275,20 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Popup Chart -->
                                 <div class="row">
                                     <div class="cell center-align">
+
+                                        <!-- Chart als kleine Ansicht zum Anklicken -->
                                         <div data-type="popup" data-width="450px">
                                             <div data-type="chart" data-device="MySpeedtest"
                                                 data-logdevice="FileLog_speedtest"
                                                 data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
                                                 data-maxvalue="130" data-width="180" data-height="130"></div>
                                             <div class="dialog">
+
+                                                <!-- Geöffnetes Popup mit Chart -->
                                                 <header>Popup</header>
                                                 <div data-type="chart" data-device="MySpeedtest"
                                                     data-logdevice="FileLog_speedtest"
