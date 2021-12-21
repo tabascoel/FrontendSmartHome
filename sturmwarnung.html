@@ -5,74 +5,106 @@
 </head>
 
 <body>
-    <!--Layout Option Gridster-->
+    <!-- Gridster Layout -->
     <div class="gridster">
         <ul>
-            <!-- Widget Menü Band-->
+            <!-- Widget Menüleiste -->
             <li data-row="1" data-col="1" data-sizex="2" data-sizey="10" data-template="menu.html"></li>
-            <!--Widget Sturmwarnung-->
+            <!--Widget für die Sturmwarnung-->
             <li data-row="1" data-col="2" data-sizex="5" data-sizey="5">
+                <!--Widget Überschrift-->
                 <Header>Sturmwarnung einschalten</header>
-                <div class="top-space-2">
-                    <div  data-type="switch" data-icon="fa-toggle-on" data-device="Wasserstand"></div>
-                </div>
-            </li>       
+                <!--Switchdevice zur Einstellung der Sturmwarnung-->
+                <div class="top-space-2" data-type="switch" data-icon="fa-toggle-on" data-device="SturmwarnungSchalter"
+                    style="font-size: xx-large;"></div>
+            </li>
             <!--Widget Wetterwerte anzeigen-->
             <li data-row="1" data-col="3" data-sizex="5" data-sizey="5">
                 <Header>Wetterwerte</header>
+                <!-- Sheet Grundgerüst zur Aufteilung in Rows und Cells -->
                 <div class="sheet">
+                    <!--Row 1 Windgeschwindigkeit-->
                     <div class="row">
-                        <!--Anzeigen der Windstärke-->
-                        <div class="display-topleft top-space-3 left-space-3">
-                            <div data-type="label">Windst&auml;rke:
-                            </div>
-                            <div data-type="label" data-device="SensorDaten">
-                            </div>
+                        <div class="cell left-align left-space-2" data-type="label">Windgeschwindigkeit:</div>
+                        <!--Label Widget anzeigen der aktuellen Windstärke-->
+                        <div class="cell center-align" data-type="label" data-device="SensorDaten"
+                            data-get="Windgeschwindigkeit">
                         </div>
-                        <div class="row">
-                            <!--Anzeigen der Windböe-->
-                            <div class="display-left top-space-3 left-space-3">
-                                <div data-type="label">Windb&ouml;e:</div>
-                                <div id="Windboe" data-type="label" data-device="SensorDaten">
-                                </div>
-                            </div>
+                    </div>
+                    <!--Row 2 Windrichtung-->
+                    <div class="row">
+                        <div class="cell left-align left-space-2" data-type="label">Windrichtung:</div>
+                        <!--Label Widget anzeigen der Windrichtung-->
+                        <div class="cell center-align" data-type="label" data-device="SensorDaten"
+                            data-get="Windrichtung">
+                        </div>
+                    </div>
+                    <!--Row 3 Windböe-->
+                    <div class="row">
+                        <div class="cell left-align left-space-2" data-type="label">Windb&ouml;e:</div>
+                        <!--Label Widget anzeigen der Windböe-->
+                        <div class="cell center-align" data-type="label" data-device="SensorDaten" data-get="Böe">
                         </div>
                     </div>
                 </div>
             </li>
-            <li data-row="2" data-col="2" data-sizex="5" data-sizey="5" > <Header>Handynummern</Header>
+            <!--Widget zum Anzeigen der Benutzernamen-->
+            <li data-row="2" data-col="2" data-sizex="5" data-sizey="5">
+                <Header>Benutzernamen</Header>
+                <!-- Sheet Grundgerüst zur Aufteilung in Rows und Cells -->
+                <div class="sheet">
+                    <div class="row">
+                        <div class="cell">
+                            <!--Label Widget zum anzeigen der Telegrammnamen-->
+                            <div class="top-space-2" data-type="label" data-device="SturmwetterwarnungFHEM_bot"
+                                data-cmd="attr" data-get="defaultPeer" id="UserNamen">
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <!--Input Widget umd die Telegrammnamen zu ändern-->
+                            <div data-type="input" data-device="SturmwetterwarnungFHEM_bot" data-cmd="attr"
+                                data-get="defaultPeer" data-set="defaultPeer" class="right-space-3"></div>
+                        </div>
+                    </div>
+                </div>
             </li>
             <!--Widget Strumschwellwerte-->
             <li data-row="2" data-col="3" data-sizex="5" data-sizey="5">
                 <Header>Sturmschwellwerte</header>
+                <!-- Sheet Grundgerüst zur Aufteilung in Rows und Cells -->
                 <div class="sheet">
+                    <!--Row 1 - windstärke-->
                     <div class="row">
-                        <!--Schwellwert Windstärke-->
-                            <div class="cell left-space-3">
-                            <div data-type="label">Schwellenwert eingeben:</div>
-                            <div id="Schwellwert_Windstaerke" class="top-space-2" data-type="input" data-set="Schwellwert_Windstaerke" ></div>
+                        <div class="cell left-space-3">
+                            <!--Schwellwert Windstärke-->
+                            <div data-type="label">Bitte den Schwellwert der Windstärke eingeben:</div>
+                            <!--Widget Input zum eingeben des Windstärken Schwellwertes-->
+                            <div class="top-space-2" data-type="input" data-set="Schwellwert_Windstaerke"></div>
                         </div>
                         <div class="cell">
-                            <!--Widget Knob-->
+                            <!--Widget Knob, verschiebbarer Statusbalken für die Windstärke -->
                             <div data-type="knob" data-device="Schwellwert_Windstaerke" data-min="0" data-max="117"
                                 data-width="100" data-height="100" data-thickness="0.05" data-step="0.1"
-                                data-unit="km/h" data-font-weight="thin" class="small"></div>
-                            <div id="Knob_Windstaerke" data-type="label" data-device="Schwellwert_Windstaerke" data-unit=" km/h">
+                                data-displayNominal="false" class="small"></div>
+                            <!--Widget Label zum anzeigen des aktuellen Schwellwertes-->
+                            <div data-type="label" data-device="Schwellwert_Windstaerke" data-unit=" km/h">
                             </div>
                         </div>
                     </div>
+                    <!--Windböe-->
                     <div class="row">
                         <div class="cell left-space-3">
                             <!--Schwellwert Windböe-->
-                            <div data-type="label">Schwellenwert eingeben:</div>
-                            <div id="Schwellwert_Windboee" class="top-space-2" data-type="input" id="sendePushNachricht"
-                                data-set="Schwellwert_Windboe"></div>
+                            <div data-type="label">Bitte den Schwellwert der Windstärke eingeben:</div>
+                            <!--Widget Input zum eingeben des Windböen Schwellwertes-->
+                            <div class="top-space-2" data-type="input" data-set="Schwellwert_Windboe"></div>
                         </div>
                         <div class="cell">
-                            <!--Widget Knob-->
-                            <div id="Knob_Windboee" data-type="knob" data-device="Schwellwert_Windboe" data-min="0" data-max="117"
-                                data-width="100" data-height="100" data-thickness="0.05" data-step="0.1"
-                                data-unit="km/h" data-font-weight="thin"></div>
+                            <!--Widget Knob, verschiebbarer Statusbalken für die Windstärke -->
+                            <div id="Knob_Windboee" data-type="knob" data-device="Schwellwert_Windboe" data-min="0"
+                                data-max="117" data-width="100" data-height="100" data-thickness="0.05" data-step="0.1"
+                                data-displayNominal="false" class="small"></div>
+                            <!--Widget Label zum anzeigen des aktuellen Schwellwertes-->
                             <div data-type="label" data-device="Schwellwert_Windboe" data-unit=" km/h">
                             </div>
                         </div>
@@ -82,4 +114,5 @@
         </ul>
     </div>
 </body>
+
 </html>

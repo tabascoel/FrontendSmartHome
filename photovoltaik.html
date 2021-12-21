@@ -7,12 +7,42 @@
     <div class="gridster">
         <ul>
             <li data-row="1" data-col="1" data-sizex="2" data-sizey="10" data-template="menu.html"></li>
+            <!--Widget fürs Einfache Heizen-->
+            <li data-row="1" data-col="2" data-sizex="4" data-sizey="6">
+                <Header>Einfaches Heizen</Header>
 
-            <li data-row="1" data-col="2" data-sizex="5" data-sizey="5">
-                <Header>Photovoltaik</header>
             </li>
-            <li data-row="1" data-col="3" data-sizex="5" data-sizey="5">
-                <Header>Zweites Widget</Header>
+            <!--Widget fürs Optimierte Heizen-->
+            <li data-row="1" data-col="3" data-sizex="4" data-sizey="6">
+                <Header>Optimiertes Heizen</header>
+                <!--Switchdevice zur Einstellung der Sturmwarnung-->
+                <div class="sheet">
+                    <!--Row 1 Einschalten des optimierten Heizens-->
+                    <div class="row">
+                        <div class="cell left-align left-space-2" data-type="label">Einschalten des optimierten Heizens:
+                        </div>
+                        <div class="cell left-align" data-type="switch" data-icon="fa-toggle-on"
+                            data-device="OptimiertesHeizen" style="font-size: large;">
+                        </div>
+
+                    </div>
+                    <!--Row 2 Temperatursensor-->
+                    <div class="row">
+                        <div class="cell left-align left-space-2" data-type="label">Temperatur:</div>
+                        <!--Label Widget anzeigen der aktuellen Temperatur-->
+                        <div class="cell left-align right-space-6" data-type="label" data-device="Temperatursensor"
+                            data-get="temperature" data-unit=" C">
+                        </div>
+                    </div>
+                    <!--Row 3 Messzeitpunkt anzeigen-->
+                    <div class="row">
+                        <div class="cell left-align left-space-2" data-type="label">Messzeitpunkt:</div>
+                        <!--Label Widget anzeigen des gemesser Temperatur zum Zeitpunktr-->
+                        <div class="cell left-align right-space-6" data-type="label" data-device="Temperatursensor"
+                            data-get="timestamp">
+                        </div>
+                    </div>
+                </div>
             </li>
             <li data-row="2" data-col="2" data-sizex="6" data-sizey="5">
                 <Header>Warmwasserboiler</Header>
