@@ -9,10 +9,37 @@
             <li data-row="1" data-col="1" data-sizex="2" data-sizey="10" data-template="menu.html"></li>
 
             <li data-row="1" data-col="2" data-sizex="4" data-sizey="6">
-                <Header>Photovoltaik</header>
+                <Header>Einfaches Heizen</Header>
+
             </li>
             <li data-row="1" data-col="3" data-sizex="4" data-sizey="6">
-                <Header>Zweites Widget</Header>
+                <Header>Optimiertes Heizen</header>
+                    <!--Switchdevice zur Einstellung der Sturmwarnung-->
+                    <div class="sheet">
+                        <!--Row 1 Einschalten des optimierten Heizens-->
+                        <div class="row">
+                            <div class="top-space-2 left-space-2">Einschalten des optimierten Heizens:</div> 
+                            <div class="cell left-align top-space-2 right-space-6" data-type="switch" data-icon="fa-toggle-on"
+                                data-device="OptimiertesHeizen" style="font-size: mini;"></div>
+                                
+                        </div>
+                        <!--Row 2 Temperatursensor-->
+                        <div class="row">
+                            <div class="cell left-align left-space-2" data-type="label">Temperatur:</div>
+                            <!--Label Widget anzeigen der aktuellen Temperatur-->
+                            <div class="cell left-align right-space-5" data-type="label" data-device="Temperatursensor"
+                                data-get="temperature">
+                            </div>
+                        </div>
+                        <!--Row 3 Messzeitpunkt anzeigen-->
+                        <div class="row">
+                            <div class="cell left-align left-space-2" data-type="label">Messzeitpunkt:</div>
+                            <!--Label Widget anzeigen des gemesser Temperatur zum Zeitpunktr-->
+                            <div class="cell left-align right-space-5" data-type="label" data-device="Temperatursensor"
+                                data-get="timestamp">
+                            </div>
+                        </div>
+                    </div>
             </li>
             <li data-row="2" data-col="2" data-sizex="8" data-sizey="4">
                 <Header>Warmwasserboiler</Header>
@@ -50,15 +77,17 @@
                                         <div class="sheet">
                                             <div class="row">
                                                 <div class="cell">
-                                                    <div class="inline" data-type="datetimepicker" data-timepicker="false" data-device='dummy1'
-                                                        data-theme="normal" data-format="d-m-Y" data-set-value="time_stamp_01"></div>
+                                                    <div class="inline" data-type="datetimepicker"
+                                                        data-timepicker="false" data-device='dummy1' data-theme="normal"
+                                                        data-format="d-m-Y" data-set-value="time_stamp_01"></div>
                                                 </div>
                                                 <div class="cell">
                                                     <div class="inline" data-type="label">-</div>
                                                 </div>
                                                 <div class="cell">
-                                                    <div  class="inline" data-type="datetimepicker" data-timepicker="false" data-device='dummy1'
-                                                        data-theme="normal" data-format="d-m-Y" data-set-value="time_stamp_02"></div>
+                                                    <div class="inline" data-type="datetimepicker"
+                                                        data-timepicker="false" data-device='dummy1' data-theme="normal"
+                                                        data-format="d-m-Y" data-set-value="time_stamp_02"></div>
                                                 </div>
                                             </div>
                                         </div>
