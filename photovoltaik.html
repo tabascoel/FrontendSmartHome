@@ -44,6 +44,8 @@
                     </div>
                 </div>
             </li>
+
+            <!-- Widget Warmwasserboiler-->
             <li data-row="2" data-col="2" data-sizex="6" data-sizey="5">
                 <Header>Warmwasserboiler</Header>
 
@@ -132,9 +134,12 @@
             <li data-row="2" data-col="3" data-sizex="4" data-sizey="5">
                 <Header>Stromdaten</Header>
 
+                <!-- Stromdatentabelle -->
                 <div class="sheet">
                     <div class="row">
                         <div class="cell center-align">
+
+                            <!-- Aktuelle produzierter Strom -->
                             <div class="sheet">
                                 <div class="row">
                                     <div class="cell-80">
@@ -149,6 +154,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktueller und Vorhergehender Tag -->
                                 <div class="row">
                                     <div class="cell ">
                                         <div data-type="label">Aktueller Tag:</div>
@@ -164,6 +170,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktuelle und Vorhergehende Woche -->
                                 <div class="row">
                                     <div class="cell">
                                         <div data-type="label">Aktuelle Woche:</div>
@@ -179,6 +186,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktueller und Vorhergehender Monat -->
                                 <div class="row">
                                     <div class="cell">
                                         <div data-type="label">Aktueller Monat:</div>
@@ -194,6 +202,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Aktuelles und Vorhergehendes Jahr -->
                                 <div class="row">
                                     <div class="cell">
                                         <div data-type="label">Aktuelles Jahr:</div>
@@ -211,6 +220,7 @@
                             </div>
                         </div>
 
+                        <!-- Aktualisierungsintervall für die Stromdatentabelle -->
                         <div class="cell">
                             <div class="sheet">
                                 <div class="row-10">
@@ -229,14 +239,20 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Popup Chart -->
                                 <div class="row">
                                     <div class="cell center-align">
+
+                                        <!-- Chart als kleine Ansicht zum Anklicken -->
                                         <div data-type="popup" data-width="450px">
                                             <div data-type="chart" data-device="MySpeedtest"
                                                 data-logdevice="FileLog_speedtest"
                                                 data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
                                                 data-maxvalue="130" data-width="180" data-height="130"></div>
                                             <div class="dialog">
+
+                                                <!-- Geöffnetes Popup mit Chart -->
                                                 <header>Popup</header>
                                                 <div data-type="chart" data-device="MySpeedtest"
                                                     data-logdevice="FileLog_speedtest"
