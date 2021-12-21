@@ -1447,7 +1447,7 @@ div[data-type="link"] > div.fa {
 
 .right {
     float: right;
-    right: 0;
+    right: 20px;
 }
 
 *:not([class*=row]) > .cell {

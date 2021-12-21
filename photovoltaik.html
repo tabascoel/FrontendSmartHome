@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </li>
-            <li data-row="2" data-col="2" data-sizex="8" data-sizey="4">
+            <li data-row="2" data-col="2" data-sizex="6" data-sizey="5">
                 <Header>Warmwasserboiler</Header>
 
                 <div class="sheet">
@@ -128,131 +128,130 @@
 
             </li>
 
-            <li data-row="1" data-col="4" data-sizex="2" data-sizey="10">
+            <!-- Widget Stromdaten -->
+            <li data-row="2" data-col="3" data-sizex="4" data-sizey="5">
                 <Header>Stromdaten</Header>
 
                 <div class="sheet">
                     <div class="row">
                         <div class="cell center-align">
-
                             <div class="sheet">
                                 <div class="row">
+                                    <div class="cell-80">
+                                        <div data-type="label" style="margin-left: 5px;">Aktuell produzierter Strom:
+                                        </div>
+                                    </div>
                                     <div class="cell">
                                         <div data-type="label"></div>
                                     </div>
-                                    <div class="cell-60 top-space-2">
-                                        <div data-type="label" style="margin-right: 10px;">Aktualisierungsintervall:
+                                    <div class="cell left-align">
+                                        <div data-type="label">Watt</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="cell ">
+                                        <div data-type="label">Aktueller Tag:</div>
+                                        <div data-type="label" style="margin-top: 5px;">Vorhergeneder Tag:</div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label"></div>
+                                        <div data-type="label" style="margin-top: 5px;"></div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label" style="margin-right: 10px;">Watt</div>
+                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;">Watt</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="cell">
+                                        <div data-type="label">Aktuelle Woche:</div>
+                                        <div data-type="label" style="margin-top: 5px;">Vorhergeneder Woche:</div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label"></div>
+                                        <div data-type="label" style="margin-top: 5px;"></div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
+                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;"> Watt</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="cell">
+                                        <div data-type="label">Aktueller Monat:</div>
+                                        <div data-type="label" style="margin-top: 5px;">Vorhergeneder Monat:</div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label"></div>
+                                        <div data-type="label" style="margin-top: 5px;"></div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
+                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;"> Watt</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="cell">
+                                        <div data-type="label">Aktuelles Jahr:</div>
+                                        <div data-type="label" style="margin-top: 5px;">Vorhergenedes Jahr:</div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label"></div>
+                                        <div data-type="label" style="margin-top: 5px;"></div>
+                                    </div>
+                                    <div class="cell">
+                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
+                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;"> Watt</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cell">
+                            <div class="sheet">
+                                <div class="row-10">
+                                    <div class="cell top-space-2">
+                                        <div data-type="label">Aktualisierungsintervall:
                                         </div>
                                         <div class="sheet">
                                             <div class="row">
-                                                <div class="cell-40 center-align">
-                                                    <div data-type="input" data-device=""></div>
+                                                <div class="cell">
+                                                    <div class="w-30 right" data-type="input" data-device=""></div>
                                                 </div>
-                                                <div class="cell center-align">
-                                                    <div data-type="label" style="margin-right: 10px;">Minuten</div>
+                                                <div class="cell left-align">
+                                                    <div data-type="label" style="margin-left: 10px;">Minuten</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell center-align">
+                                        <div data-type="popup" data-width="450px">
+                                            <div data-type="chart" data-device="MySpeedtest"
+                                                data-logdevice="FileLog_speedtest"
+                                                data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
+                                                data-maxvalue="130" data-width="180" data-height="130"></div>
+                                            <div class="dialog">
+                                                <header>Popup</header>
+                                                <div data-type="chart" data-device="MySpeedtest"
+                                                    data-logdevice="FileLog_speedtest"
+                                                    data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
+                                                    data-maxvalue="130">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="sheet">
-                                <div class="row">
-                                    <div class="cell-80 top-space-4 center-align">
-                                        <div data-type="label" style="margin-left: 5px;">Aktuell produzierter Strom:
-                                        </div>
-                                    </div>
-                                    <div class="cell top-space-4 center-align">
-                                        <div data-type="label"></div>
-                                    </div>
-                                    <div class="cell top-space-4 right-align">
-                                        <div data-type="label" style="margin-left: 5px; margin-right: 10px;">Watt</div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label">Aktueller Tag:</div>
-                                        <div data-type="label" style="margin-top: 10px;">Vorhergeneder Tag:</div>
-                                    </div>
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label"></div>
-                                        <div data-type="label" style="margin-top: 10px;"></div>
-                                    </div>
-                                    <div class="cell right-align top-space-2">
-                                        <div data-type="label" style="margin-right: 10px;">Watt</div>
-                                        <div data-type="label" style="margin-top: 10px; margin-right: 10px;">Watt</div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label">Aktuelle Woche:</div>
-                                        <div data-type="label" style="margin-top: 10px;">Vorhergeneder Woche:</div>
-                                    </div>
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label"></div>
-                                        <div data-type="label" style="margin-top: 10px;"></div>
-                                    </div>
-                                    <div class="cell right-align top-space-2">
-                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
-                                        <div data-type="label" style="margin-top: 10px; margin-right: 10px;"> Watt</div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label">Aktueller Monat:</div>
-                                        <div data-type="label" style="margin-top: 10px;">Vorhergeneder Monat:</div>
-                                    </div>
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label"></div>
-                                        <div data-type="label" style="margin-top: 10px;"></div>
-                                    </div>
-                                    <div class="cell right-align top-space-2">
-                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
-                                        <div data-type="label" style="margin-top: 10px; margin-right: 10px;"> Watt</div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label">Aktuelles Jahr:</div>
-                                        <div data-type="label" style="margin-top: 10px;">Vorhergenedes Jahr:</div>
-                                    </div>
-                                    <div class="cell center-align top-space-2">
-                                        <div data-type="label"></div>
-                                        <div data-type="label" style="margin-top: 10px;"></div>
-                                    </div>
-                                    <div class="cell right-align top-space-2">
-                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
-                                        <div data-type="label" style="margin-top: 10px;margin-right: 10px;"> Watt</div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="cell-20">
-                            <div data-type="popup" data-width="450px">
-                                <div data-type="chart" data-device="MySpeedtest" data-logdevice="FileLog_speedtest"
-                                    data-columnspec="4:MySpeedtest.download:" data-minvalue="0" data-maxvalue="130"
-                                    data-width="200" data-height="100"></div>
-                                <div class="dialog">
-                                    <header>Popup</header>
-                                    <div data-type="chart" data-device="MySpeedtest" data-logdevice="FileLog_speedtest"
-                                        data-columnspec="4:MySpeedtest.download:" data-minvalue="0" data-maxvalue="130">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </li>
-
         </ul>
     </div>
 </body>
