@@ -3145,9 +3145,9 @@ select::-ms-expand {
 .w1x select,
 [data-type="label"].w1x,
 [data-type="input"].w1x {
-    min-width: 70px;
-    max-width: 70px;
-    width: 70px;
+    min-width: 50px;
+    max-width: 50px;
+    width: 50px;
 }
 
 .w-10 {
