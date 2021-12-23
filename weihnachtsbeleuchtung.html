@@ -28,155 +28,139 @@
                             <div data-type="switch" style="font-size: xx-large;" data-device="funkLamp" data-get-on="on"
                                 data-get-off="off" data-set-on="on" data-set-off="off"></div>
                         </div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
                     </div>
 
-                    <!-- Betriebsmodi Überschrift -->
+                    <!-- Betriebsmodi -->
                     <div class="row">
-                        <div class="sheet">
-                            <div class="row">
-                                <div class="cell">
-                                    <div data-type="label">Betriebsmodi:</div>
-                                </div>
-                                <div class="cell"></div>
-                            </div>
+                        <div class="cell">
+                            <div class="sheet">
 
-                            <!-- Betriebsmodi -->
-                            <div class="row">
-
-                                <!-- Anzeige das der manuelle Betrieb aktiv ist -->
-                                <div class="cell top-space-2">
-                                    <!-- Widget Switch zum aktivieren und deaktivieren des Modus -->
-                                    <div data-type="switch" data-device="funkLampModus" data-icon="fa-power-off"
-                                        data-set-on="Manuell" data-set-off="Manuell" data-get-on="Manuell"
-                                        data-get-off="!Manuell"></div>
-                                    <div data-type="label">Manueller Betrieb</div>
-                                </div>
-                                <div class="cell"></div>
-                            </div>
-
-                            <!-- Betriebsmodus - Fest definierte Betriebszeit -->
-                            <div class="row">
-
-                                <!-- Widget Switch zum aktivieren und deaktivieren des Modus -->
-                                <div class="cell top-space-2ss">
-                                    <div data-type="switch" data-device="funkLampModus" data-icon="fa-hourglass-half"
-                                        data-set-on="festeZeit" data-set-off="Manuell" data-get-on="festeZeit"
-                                        data-get-off="!festeZeit"></div>
-                                    <div data-type="label">Feste Betriebszeiten</div>
+                                <!-- Betriebsmodi  Überschrift-->
+                                <div class="row-10">
+                                    <div class="cell-1-5 center-align">
+                                        <div data-type="label">Betreibsmodi:</div>
+                                    </div>
+                                    <div class="cell-1-5"></div>
+                                    <div class="cell-1-5"></div>
+                                    <div class="cell-1-5"></div>
+                                    <div class="cell-1-5"></div>
                                 </div>
 
-                                <!-- Widget Label zur Definition des Modus -->
-                                <div class="cell">
-                                    <div data-type="label" data-device="funkLampModus" data-get="funkLampModus"
-                                        data-hide-on="!festeZeit" data-hide-off="festeZeit" data-hide="!festeZeit" class="inline ">Lichterkette
-                                        zwischen 17:00 bis 07:00
-                                        Uhr
-                                        "AN".
+                                <!-- Switch Betriebsmodi -->
+                                <div class="row-20">
+
+                                    <!-- Betreibsmodi: Manueller Betrieb -->
+                                    <div class="cell">
+                                        <div data-type="switch" data-device="funkLampModus" data-icon="fa-power-off"
+                                            data-set-on="Manuell" data-set-off="Manuell" data-get-on="Manuell"
+                                            data-get-off="!Manuell"></div>
+                                        <div data-type="label">Manueller Betrieb</div>
+                                    </div>
+
+                                    <!-- Betreibsmodi: Feste Betriebszeit -->
+                                    <div class="cell">
+                                        <div data-type="switch" data-device="funkLampModus"
+                                            data-icon="fa-hourglass-half" data-set-on="festeZeit" data-set-off="Manuell"
+                                            data-get-on="festeZeit" data-get-off="!festeZeit"></div>
+                                        <div data-type="label">Feste Betriebszeiten</div>
+                                    </div>
+
+                                    <!-- Betriebsmodus - Sonnenuntergang und Sonnenaufgang -->
+                                    <div class="cell">
+                                        <div data-type="switch" data-device="funkLampModus" data-icon="wi wi-horizon"
+                                            data-set-on="Sonne" data-set-off="Manuell" data-get-on="Sonne"
+                                            data-get-off="!Sonne" data-hide="funkLampModus">
+                                        </div>
+                                        <div data-type="label">Sonnenuntergang und Sonnenaufgang</div>
+                                    </div>
+
+                                    <!-- Betriebsmodus - Sonnenuntergang und Sonnenaufgang mit Uhrzeit -->
+                                    <div class="cell">
+                                        <div data-type="switch" data-device="funkLampModus" data-icon="wi wi-sunrise"
+                                            data-set-on="SZeit" data-set-off="Manuell" data-get-on="SZeit"
+                                            data-get-off="!SZeit">
+                                        </div>
+                                        <div data-type="label">Sonnenzeiten mit gekoppelter Uhrzeit</div>
+                                    </div>
+
+                                    <!-- Betriebsmodus - Anwesenheit -->
+                                    <div class="cell">
+                                        <div data-type="switch" data-device="funkLampModus" data-icon="fa-user-check"
+                                            data-set-on="Anwesenheit" data-set-off="Manuell" data-get-on="Anwesenheit"
+                                            data-get-off="!Anwesenheit"></div>
+                                        <div data-type="label">Anwesenheit</div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Betriebsmodus - Sonnenuntergang und Sonnenaufgang -->
-                            <div class="row">
-                                <div class="cell top-space-2">
+                                <!-- Betriebsmodi Informationen -->
+                                <div class="row-30">
 
-                                    <!-- Widget Switch zum aktivieren und deaktivieren des Modus -->
-                                    <div data-type="switch" data-device="funkLampModus" data-icon="wi wi-horizon"
-                                        data-set-on="Sonne" data-set-off="Manuell" data-get-on="Sonne"
-                                        data-get-off="!Sonne" data-hide="funkLampModus">
-                                    </div>
-                                    <div data-type="label">Sonnenuntergang und Sonnenaufgang</div>
-                                </div>
+                                    <!-- Informationen Betreibsmodi: Manueller Betrieb -->
+                                    <div class="cell"></div>
 
-                                <!-- Widget Label zur Definition des Modus -->
-                                <div class="cell" data-device="funkLampModus" data-get="funkLampModus"
-                                    data-hide-on="!Sonne" data-hide-off="Sonne">
-
-                                    <!-- Ausgabe nächster Sonnenaufgangszeit -->
-                                    <div>
-                                        <div data-type="label" class="inline" data-device="doif_sonne">Nächster
-                                            Sonnenaufgang:
+                                    <!-- Informationen Betreibsmodi: Feste Betriebszeit -->
+                                    <div class="cell top-align">
+                                        <div data-type="label" data-device="funkLampModus" data-get="funkLampModus"
+                                            data-hide-on="!festeZeit" data-hide-off="festeZeit" data-hide="!festeZeit">
+                                            Lichterkette
+                                            zwischen 17:00 bis 07:00
+                                            Uhr
+                                            "AN".
                                         </div>
                                     </div>
-                                    <div>
-                                        <div data-type="label" data-device="doif_sonne" data-get="timer_02_c02"
-                                            data-substitution="s/(:00)$//g" class="inline"></div>
-                                    </div>
 
-                                    <!-- Ausgabe nächster Sonnenuntergangszeit -->
-                                    <div>
-                                        <div data-type="label" class="inline top-space-1" data-device="doif_sonne">
+                                    <!-- Informationen Betriebsmodus - Sonnenuntergang und Sonnenaufgang -->
+                                    <div class="cell top-align" data-device="funkLampModus" data-get="funkLampModus"
+                                        data-hide-on="!Sonne" data-hide-off="Sonne">
+
+                                        <!-- Ausgabe nächster Sonnenaufgangszeit -->
+                                        <div data-type="label" data-device="doif_sonne">Nächster
+                                            Sonnenaufgang:
+                                        </div>
+                                        <div data-type="label" data-device="doif_sonne" data-get="timer_02_c02"
+                                            data-substitution="s/(:00)$//g"></div>
+                                        <p></p>
+
+
+                                        <!-- Ausgabe nächster Sonnenuntergangszeit -->
+                                        <div data-type="label" data-device="doif_sonne">
                                             Nächster
                                             Sonnenuntergang:</div>
-                                    </div>
-                                    <div>
                                         <div data-type="label" data-device="doif_sonne" data-get="timer_01_c01"
-                                            data-substitution="s/(:00)$//g" class="inline"></div>
+                                            data-substitution="s/(:00)$//g"></div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <!-- Betriebsmodus - Sonnenuntergang und Sonnenaufgang mit Uhrzeit -->
-                            <div class="row">
-                                <div class="cell top-space-2">
-
-                                    <!-- Widget Switch zum aktivieren und deaktivieren des Modus -->
-                                    <div data-type="switch" data-device="funkLampModus" data-icon="wi wi-sunrise"
-                                        data-set-on="SZeit" data-set-off="Manuell" data-get-on="SZeit"
-                                        data-get-off="!SZeit">
-                                    </div>
-                                    <div data-type="label">Sonnenzeiten mit gekoppelter Uhrzeit</div>
-                                </div>
-
-                                <!-- Widget Label zur Definition des Modus -->
-                                <div class="cell" data-get="funkLampModus" data-hide-on="!SZeit" data-hide-off="SZeit"
-                                    data-hide="">
-                                    <div>
-                                        <div data-type="label" class="inline">Spätestens um 07:30 Uhr Lichterkette
+                                    <!-- Informationen Betriebsmodus - Sonnenuntergang und Sonnenaufgang mit Uhrzeit -->
+                                    <div class="cell top-align" data-get="funkLampModus" data-hide-on="!SZeit"
+                                        data-hide-off="SZeit" data-hide="">
+                                        <div data-type="label">Spätestens um 07:30 Uhr Lichterkette
                                             "AUS".</div>
-                                        <div data-type="label" class="inline">Nächster Sonnenaufgang</div>
-                                    </div>
+                                        <p></p>
 
-                                    <!-- Ausgabe nächster Sonnenaufgangszeit -->
-                                    <div>
+                                        <!-- Ausgabe nächster Sonnenaufgangszeit -->
+                                        <div data-type="label">Nächster Sonnenaufgang:</div>
                                         <div data-type="label" data-device="doif_sZeit" data-get="timer_02_c02"
-                                            data-substitution="s/(:00)$//g" class="inline"></div>
-                                    </div>
-                                    <div>
-                                        <div data-type="label" class="inline top-space-1">Nächster Sonnenuntergang</div>
-                                    </div>
+                                            data-substitution="s/(:00)$//g"></div>
+                                        <p></p>
 
-                                    <!-- Ausgabe nächster Sonnenuntergangszeit -->
-                                    <div>
+                                        <!-- Ausgabe nächster Sonnenuntergangszeit -->
+                                        <div data-type="label">Nächster Sonnenuntergang:</div>
                                         <div data-type="label" data-device="doif_sZeit" data-get="timer_01_c01"
-                                            data-substitution="s/(:00)$//g" class="inline"></div>
+                                            data-substitution="s/(:00)$//g"></div>
+                                    </div>
+
+                                    <!-- Informationen Betriebsmodus - Anwesenheit -->
+                                    <div class="cell top-align">
+                                        <div data-type="label" data-get="Anwesenheit" data-device="funkLampModus"
+                                            data-hide-on="!Anwesenheit" data-hide="!Anwesenheit"
+                                            data-hide-off="Anwesenheit">
+                                            Lichterkette zwischen 17:00
+                                            bis 07:00 Uhr
+                                            bei
+                                            Anwesenheit "AN".</div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Betriebsmodus - Anwesenheit -->
-                            <div class="row">
-                                <div class="cell top-space-2">
-
-                                    <!-- Widget Switch zum aktivieren und deaktivieren des Modus -->
-                                    <div data-type="switch" data-device="funkLampModus" data-icon="fa-user-check"
-                                        data-set-on="Anwesenheit" data-set-off="Manuell" data-get-on="Anwesenheit"
-                                        data-get-off="!Anwesenheit"></div>
-                                    <div data-type="label">Anwesenheit</div>
-                                </div>
-
-                                <!-- Widget Label zur Definition des Modus -->
-                                <div class="cell">
-                                    <div data-type="label" class="inline" data-get="Anwesenheit" data-device="funkLampModus"
-                                        data-hide-on="!Anwesenheit" data-hide="!Anwesenheit" data-hide-off="Anwesenheit">
-                                        Lichterkette zwischen 17:00
-                                        bis 07:00 Uhr
-                                        bei
-                                        Anwesenheit "AN".</div>
+                                <div class="row-40">
                                 </div>
                             </div>
                         </div>
