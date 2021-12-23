@@ -11,12 +11,12 @@ main {
 }
 
 body {
-    background-color: #000000;
+    background-color: #c9c9c9;
     background-size: 100%;
     font-family: "Helvetica Neue", "Helvetica", "Open Sans", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: small;
-    color: #eeeeee;
+    color: #636363;
     width: auto;
     /* never remove this, it is important for internal checks */
     text-align: center;
@@ -184,7 +184,7 @@ a:active {
 }
 
 .orange {
-    color: #aa6900 !important;
+    color: #f7882f !important;
 }
 
 .red {
@@ -547,7 +547,7 @@ section {
 
 .gridster > ul > li,
 .card {
-    background-color: #2A2A2A;
+    background-color: #acacacb9;
 }
 
 .gridster > ul > li.round {
@@ -557,8 +557,8 @@ section {
 .gridster li header,
 .dialog > header,
 .card > header {
-    background: #262626;
-    color: #8c8c8c;
+    background: #6b7a8f;
+    color: #cccccc;
     display: block;
     font-size: 1.2em;
     font-weight: bold;
@@ -2752,7 +2752,15 @@ img.mini,
     font-size: 100% !important;
     white-space: nowrap;
     padding-top: 1em;
-    color: #8c8c8c;
+    color: #636363;
+}
+
+[data-type="pagetab"]:not([data-colors]):not([data-on-color]):not([data-color]) .active i#fg{
+    color: #cccccc !important;
+}
+
+[data-type="pagetab"]:not([data-background-colors]):not([data-on-background-color]) .active i#bg {
+    color: #6b7a8f !important;
 }
 
 .labelright[data-type="pagetab"] .label {
@@ -3099,7 +3107,7 @@ option {
 select,
 input.textinput {
     border-radius: 10px;
-    border: 2px solid #8C8C8C;
+    border: 2px solid #f7882f;
     background: transparent;
     width: 100%;
     padding: 6px !important;
@@ -3107,7 +3115,7 @@ input.textinput {
     -moz-appearance: none;
     appearance: none;
     font-size: 1em;
-    color: #eeeeee;
+    color: #636363;
 }
 
 select::-ms-expand {
@@ -3733,7 +3741,7 @@ img.faded {
 /* label widget */
 
 [data-type="label"].active {
-    color: #aa6900 !important;
+    color: #636363 !important;
 }
 
 /* symbol  widget */
@@ -3741,7 +3749,7 @@ img.faded {
 /* foreground on */
 
 [data-type="symbol"]:not([data-colors]):not([data-on-color]) .active i#fg {
-    color: #aa6900 !important;
+    color: #f7c331 !important;
 }
 
 /* switch  widget */
@@ -3749,15 +3757,27 @@ img.faded {
 /* background on */
 
 [data-type="switch"]:not([data-background-colors]):not([data-on-background-color]) .active i#bg {
-    color: #aa6900 !important;
+    color: #ce7125 !important;
+}
+
+[data-type="switch"]:not([data-background-colors]):not([data-off-background-color]) i#bg {
+    color: #636363 !important;
 }
 
 /* switch  widget invert */
 
 /* foreground on */
 
+[data-type="switch"]:not([data-colors]):not([data-on-color]):not([data-color]) .active i#fg {
+    color: #cccccc !important;
+}
+
+[data-type="switch"]:not([data-colors]):not([data-on-color]):not([data-color]) i#fg {
+    color: #cccccc !important;
+}
+
 [data-type="switch"]:not([data-colors]):not([data-on-color]).invert .active i#fg {
-    color: #aa6900 !important;
+    color: #f7c331 !important;
 }
 
 /* pseudo classes for canvas painted widgets
