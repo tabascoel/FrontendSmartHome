@@ -10,8 +10,114 @@
             <!--Widget fürs Einfache Heizen-->
             <li data-row="1" data-col="2" data-sizex="5" data-sizey="5">
                 <Header>Einfaches Heizen</Header>
+                <!--Switchdevice zur Einstellung der Sturmwarnung-->
+                <div class="sheet">
+                    <!--Row 1 Einschalten des einfaches Heizens-->
+                    <div class="row">
+                        <div class=" cell left-align left-space-2" data-type="label">Einschalten des einfachen
+                            Heizens:
+                        </div>
+                        <div class="inline cell right-align" data-type="switch" data-icon="fa-toggle-on"
+                            data-device="EinfachesHeizen" style="font-size: large;">
+                        </div>
 
+                    </div>
+                    <!--Row 2 Temperatursensor-->
+                    <div class="row">
+                        <!--Label Widget anzeigen der aktuellen Temperatur-->
+                        <div class="inline cell w3x" data-type="label"> periodische Überprüfung nach:
+                        </div>
+                        <div class="inline cell w1x left-space-2" data-type="label" data-device="">
+                        </div>
+                        <div class="inline cell w3x" data-type="label"> Minuten
+                        </div>
+                    </div>
+                    <!--Row 3 Temperatursensor-->
+                    <div class="row">
+                        <!--Label Widget anzeigen der aktuellen Temperatur-->
+                        <div class="inline cell w3x" data-type="label">Einschalten der Infrarotheizung nach:
+                        </div>
+                        <div class="inline cell w1x" data-type="label" data-device="">
+                        </div>
+                        <div class="inline cell w3x" data-type="label"> Watt
+                        </div>
+                    </div>
+                    <!--Row 3 Temperatursensor-->
+                    <div class="row">
+                        <!--Label Widget anzeigen der aktuellen Temperatur-->
+                        <div class="inline cell w3x" data-type="label"> Überhitzungsschutz nach:
+                        </div>
+                        <div class="inline cell w1x" data-type="label" data-device="">
+                        </div>
+                        <div class="inline cell w3x" data-type="label"> Minuten
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Label Widget anzeigen der aktuellen Temperatur-->
+                        <div class="inline cell w3x" data-type="label"> Die Infrarotheizungwird für: </div>
+                        <div class="inline cell w1x " data-type="label" data-device="">
+                        </div>
+                        <div class="inline cell w3x" data-type="label"> Minuten
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="inline cell display-bottomright bottom-space-2">
+                            <div data-type="popup" data-height="400px" data-width="1200px">
+                                <div>
+                                    <div class="fa fa-table fa-2x"></div>
+                                    <div>Konfigutationsdialog öffnen</div>
+                                </div>
+                                <div class="dialog">
+                                    <header>Infrarotheizung</header>
+                                    <div class="sheet">
+                                        <div class="row">
+                                            <div class="cell-10" data-height="100px">
+                                                <div class="inline cell" data-type="label">Bitte den Schwellwert der
+                                                    periodischen Überprüfung eingeben:</div>
+                                                <div data-type="input" data-device="" class="inline cell small"></div>
+                                                <div data-type="label" class="inline cell "> Minuten</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell" data-height="100px">
+                                                <div data-type="label" class="inline cell">Bitte die Wattzahl eingeben
+                                                    ab wann die Heizung eingeschalten wird: </div>
+                                                <div data-type="input" class="inline cell small"></div>
+
+                                                <div class="inline cell" data-type="label">Watt
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell" data-height="100px">
+                                                <div data-type="label" class="inline cell">Bitte den Schwellwert
+                                                    eingeben wie lange die Heizung am Stück laufen darf: </div>
+                                                <div data-type="input" class="inline cell small"></div>
+                                                <div class="inline cell" data-type="label">Minuten
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell" data-height="100px">
+                                                <div data-type="label" class="inline cell">Bitte den Schwellwert
+                                                    eingeben wie lange der Überhitzungsschutz an ist: </div>
+                                                <div data-type="input" class="inline cell small"></div>
+
+                                                <div class="inline cell" data-type="label">Minuten
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
+
             <!--Widget fürs Optimierte Heizen-->
             <li data-row="1" data-col="3" data-sizex="5" data-sizey="5">
                 <Header>Optimiertes Heizen</header>
@@ -19,27 +125,94 @@
                 <div class="sheet">
                     <!--Row 1 Einschalten des optimierten Heizens-->
                     <div class="row">
-                        <div class="cell left-align left-space-2" data-type="label">Einschalten des optimierten Heizens:
+                        <div class="inline cell left-align left-space-2" data-type="label">Einschalten des optimierten
+                            Heizens:
                         </div>
-                        <div class="cell left-align" data-type="switch" data-icon="fa-toggle-on"
+                        <div class="inline cell left-align" data-type="switch" data-icon="fa-toggle-on"
                             data-device="OptimiertesHeizen" style="font-size: large;">
                         </div>
 
                     </div>
                     <!--Row 2 Temperatursensor-->
                     <div class="row">
-                        <div class="cell left-align left-space-2" data-type="label">Temperatur:</div>
+                        <div class="inline cell left-align left-space-2" data-type="label">Temperatur:</div>
                         <!--Label Widget anzeigen der aktuellen Temperatur-->
-                        <div class="cell left-align right-space-6" data-type="label" data-device="Temperatursensor"
-                            data-get="temperature" data-unit=" C">
+                        <div class="inline cell left-align right-space-6" data-type="label"
+                            data-device="Temperatursensor" data-get="temperature" data-unit=" C">
                         </div>
                     </div>
-                    <!--Row 3 Messzeitpunkt anzeigen-->
+                    <!--Row 3 Temperatursensor-->
                     <div class="row">
-                        <div class="cell left-align left-space-2" data-type="label">Messzeitpunkt:</div>
-                        <!--Label Widget anzeigen des gemesser Temperatur zum Zeitpunktr-->
-                        <div class="cell left-align right-space-6" data-type="label" data-device="Temperatursensor"
-                            data-get="timestamp">
+                        <div class="inline cell left-align left-space-2" data-type="label">Luftfeuchtigkeit:</div>
+                        <!--Label Widget anzeigen der aktuellen Temperatur-->
+                        <div class="inline cell left-align right-space-6" data-type="label"
+                            data-device="Temperatursensor" data-get="luftfeuchtigkeit" data-unit=" %">
+                        </div>
+                    </div>
+
+                    <!--Row 4 Messzeitpunkt anzeigen-->
+                    <div class="row">
+                        <div class="inline cell left-align left-space-2" data-type="label">Messzeitpunkt:</div>
+
+                        <!--Label Widget anzeigen des gemesser Temperatur zum Zeitpunkt-->
+                        <div class="inline cell left-align right-space-6" data-type="label"
+                            data-device="Temperatursensor" data-get="timestamp">
+                        </div>
+
+                        <div class="inline cell display-bottomright bottom-space-2">
+                            <div data-type="popup" data-height="400px" data-width="1200px">
+                                <div>
+                                    <div class="fa fa-table fa-2x"></div>
+                                    <div>Konfigutationsdialog öffnen</div>
+                                </div>
+                                <div class="dialog">
+                                    <header>Infrarotheizung</header>
+                                    <div class="sheet">
+                                        <div class="row">
+                                            <div class="cell-10" data-height="100px">
+                                                <div data-type="label">Infrarotheizung einschalten:</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="cell-10" data-height="100px">
+
+                                                <div data-type="label" class="inline cell">Temparatur</div>
+                                                <div data-type="label" data-device="" data-unit=" C"
+                                                    class="inline cell"></div>
+
+                                                <div class="inline cell" data-type="label">Bitte den Schwellwert der
+                                                    Temparatur eingeben:</div>
+                                                <div data-type="input" data-device="" class="inline cell"></div>
+                                                <div data-type="knob" data-device="" data-width="50" data-height="50"
+                                                    data-thickness="0.01" data-step="1.0" data-displayNominal="false"
+                                                    class="inline cell small"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="cell" data-height="100px">
+                                                <div data-type="label">Infrarotheizung ausschalten:</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell" data-height="100px">
+                                                <div data-type="label" class="inline cell">Luftfeuchtigkeit</div>
+                                                <div data-type="label" data-device="" data-unit=" C"
+                                                    class="inline cell"></div>
+
+                                                <div class="inline cell" data-type="label">Bitte den Schwellwert der
+                                                    Luftfeuchtigkeit eingeben:
+                                                </div>
+                                                <div data-type="input" data-device="" class="inline cell"></div>
+                                                <div data-type="knob" data-device="" data-width="50" data-height="50"
+                                                    data-thickness="0.01" data-step="1.0" data-displayNominal="false"
+                                                    class="inline cell small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,9 +280,13 @@
                                     <div class="cell">
                                         <div data-type="label">Zeitraum festlegen:</div>
                                         <p></p>
-                                        <div data-type="datetimepicker" data-device="" data-timepicker="false" data-set-value="" data-get="" data-format="Y-m-d" class="inline thin orange"></div>
+                                        <div data-type="datetimepicker" data-device="" data-timepicker="false"
+                                            data-set-value="" data-get="" data-format="Y-m-d"
+                                            class="inline thin orange"></div>
                                         <div data-type="label">bis</div>
-                                        <div data-type="datetimepicker" data-device="" data-timepicker="false" data-set-value="" data-get="" data-format="Y-m-d" class="inline thin orange"></div>
+                                        <div data-type="datetimepicker" data-device="" data-timepicker="false"
+                                            data-set-value="" data-get="" data-format="Y-m-d"
+                                            class="inline thin orange"></div>
                                     </div>
 
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
@@ -117,7 +294,7 @@
                                         <div data-type="popup" data-height="400px" data-width="600px">
                                             <div class="bottom-space-3">
                                                 <div class="fa fa-table fa-2x"></div>
-                                                <div >Stromwertetabelle öffnen</div>
+                                                <div>Stromwertetabelle öffnen</div>
                                             </div>
                                             <div class="dialog">
                                                 <header>Stromwertetabelle</header>
@@ -345,7 +522,7 @@
                                         <div data-type="label" class="inline  cell">Watt</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row-30">
                                     <div class="cell"></div>
                                     <div class="cell"></div>
@@ -390,7 +567,9 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
+                                        </div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;">Watt</div>
@@ -406,7 +585,9 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
+                                        </div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;"> Watt</div>
@@ -422,7 +603,9 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
+                                        </div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;"> Watt</div>
@@ -438,7 +621,9 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
+                                        </div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;"> Watt</div>
