@@ -135,12 +135,12 @@ i#bg.fa.fa-stack-2x.ftui-square-o {
 
 a:link {
     text-decoration: none;
-    color: #aa6900;
+    color: #f7882f;
 }
 
 a:visited {
     text-decoration: none;
-    color: #aa6900;
+    color: #f7882f;
 }
 
 a:hover {
@@ -232,7 +232,7 @@ a:active {
 }
 
 .border-orange {
-    border: 3px solid #aa6900;
+    border: 3px solid #f7882f;
 }
 
 .border-red {
@@ -1258,7 +1258,7 @@ main > .box.horizontal {
 
 .bg-orange,
 .btn-orange {
-    background-color: #aa6900 !important;
+    background-color: #f7882f !important;
 }
 
 .bg-red,
@@ -1932,7 +1932,7 @@ div[data-type="link"] > div.fa {
     border-radius: 4px;
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #2A2A2A;
+    background-color: #acacac;
     background-clip: padding-box;
     overflow: auto;
 }
@@ -1949,7 +1949,7 @@ div[data-type="link"] > div.fa {
 }
 
 .dialog-close:hover {
-    color: #aa6900;
+    color: #f7882f;
     -webkit-transition: color 1s ease;
     -moz-transition: color 1s ease;
     transition: color 1s ease;
@@ -3101,7 +3101,7 @@ div[data-type="circlemenu"] div.circleborder {
 }
 
 option {
-    background-color: #2a2a2a;
+    background-color: #f7882f;
 }
 
 select,
@@ -3115,7 +3115,7 @@ input.textinput {
     -moz-appearance: none;
     appearance: none;
     font-size: 1em;
-    color: #636363;
+    color: white;
 }
 
 select::-ms-expand {
@@ -3719,7 +3719,7 @@ img.faded {
 }
 
 .warm {
-    color: #aa6900;
+    color: #f7882f;
 }
 
 /* color theme classes for widgets */
@@ -3735,7 +3735,7 @@ img.faded {
 }
 
 [data-type="slider"]:not([data-color]) .range-quantity {
-    background-color: #aa6900 !important;
+    background-color: #f7882f !important;
 }
 
 /* label widget */
@@ -3785,7 +3785,7 @@ img.faded {
 
 .checkbox.on {
     color: #bfbfbf;
-    background-color: #aa6900;
+    background-color: #f7882f;
 }
 
 .checkbox.off {
@@ -3794,12 +3794,12 @@ img.faded {
 }
 
 .slider {
-    color: #aa6900;
+    color: #f7882f;
 }
 
 .homestatus {
     background-color: #666;
-    color: #aa6900;
+    color: #f7882f;
 }
 
 .homestatus.icon {
@@ -3808,7 +3808,7 @@ img.faded {
 }
 
 .volume.handle {
-    color: #aa6900;
+    color: #f7882f;
 }
 
 .volume {
@@ -3818,7 +3818,7 @@ img.faded {
 
 
 .wind_direction.handle {
-    color: #aa6900;
+    color: #f7882f;
 }
 
 .wind_direction {
