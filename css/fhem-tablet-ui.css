@@ -3116,6 +3116,7 @@ input.textinput {
     appearance: none;
     font-size: 1em;
     color: #636363;
+    outline:none;
 }
 
 select::-ms-expand {
