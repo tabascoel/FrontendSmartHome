@@ -482,34 +482,33 @@
 
                                         <!-- Chart als kleine Ansicht zum Anklicken -->
                                         <div data-type="popup" data-width="700px" data-height="500">
-                                            <div data-type="chart" data-device="MySpeedtest"
+                                            <div data-type="chart" data-ptype="bars" data-device="MySpeedtest"
                                                 data-logdevice="FileLog_speedtest"
                                                 data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
                                                 data-maxvalue="130" data-width="180" data-height="130"></div>
                                             <div class="dialog">
 
-                                                <!-- Geöffnetes Popup mit Chart -->
+                                                <!-- Geöffnetes Popup mit Chart 
                                                 <header>Popup</header>
                                                 <div class="sheet-90">
                                                     <div class="row">
-                                                        <div class="cell left-align">
-                                                            <div class="inline cell">Ansicht in:</div>
-                                                            <div class="inline w2x cell" data-type="select" data-device=""
-                                                                data-set="" data-list=""
-                                                                data-items='["weeks","months","years"]'
-                                                                data-alias='["Wochen","Monate","Jahre"]'>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
                                                         <div class="cell">
-                                                            <div data-type="chart" data-device="MySpeedtest"
-                                                                data-logdevice="FileLog_speedtest"
-                                                                data-columnspec="4:MySpeedtest.download:"
-                                                                data-minvalue="0" data-height="370" data-width="650" data-maxvalue="180">
+                                                            <div data-type="chart" 
+                                                                 data-device="MySpeedtest"
+                                                                data-ptype='["bars","bars","bars"]'
+                                                                data-logdevice='["FileLog_weeks","FileLog_months","FileLog_years"]'
+                                                                data-logfile='["weeks.log","moths.log","years.log"]'
+                                                                data-columnspec='["definition for how to find the values","",""]'
+                                                                data-timeranges=""
+                                                                data-yunit="Watt"
+                                                                data-daysago_end="now"
+                                                                data-daysago_start='["eeee","MMMM","yyyy"]'
+                                                                data-legend='["Wochen","Monate","Jahre"]'
+                                                                data-minvalue="0" data-maxvalue="auto"
+                                                                data-height="450" data-width="650">
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                             </div>
                                         </div>
