@@ -696,10 +696,25 @@
 
                                                 <!-- Geöffnetes Popup mit Chart -->
                                                 <header>Popup</header>
-                                                <div data-type="chart" data-device="MySpeedtest"
-                                                    data-logdevice="FileLog_speedtest"
-                                                    data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
-                                                    data-maxvalue="130">
+                                                <div class="sheet-90"> 
+                                                    <div class="row">
+                                                        <div class="cell">
+                                                            <div data-type="chart" 
+                                                                 data-device="MySpeedtest"
+                                                                data-ptype='["bars","bars","bars"]'
+                                                                data-logdevice='["FileLog_weeks","FileLog_months","FileLog_years"]'
+                                                                data-logfile='["weeks.log","moths.log","years.log"]'
+                                                                data-columnspec='["definition for how to find the values","",""]'
+                                                                data-timeranges=""
+                                                                data-yunit="Watt"
+                                                                data-daysago_end="now"
+                                                                data-daysago_start='["eeee","MMMM","yyyy"]'
+                                                                data-legend='["Wochen","Monate","Jahre"]'
+                                                                data-minvalue="0" data-maxvalue="auto"
+                                                                data-height="450" data-width="650">
+                                                            </div>
+                                                        </div>
+                                                    </div>-->
                                                 </div>
                                             </div>
                                         </div>
