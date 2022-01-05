@@ -107,9 +107,13 @@
                                     <div class="cell">
                                         <div data-type="label">Zeitraum festlegen:</div>
                                         <p></p>
-                                        <div data-type="datetimepicker" data-device="" data-timepicker="false" data-set-value="" data-get="" data-format="Y-m-d" class="inline thin orange"></div>
+                                        <div data-type="datetimepicker" data-device="" data-timepicker="false"
+                                            data-set-value="" data-get="" data-format="Y-m-d"
+                                            class="inline thin orange"></div>
                                         <div data-type="label">bis</div>
-                                        <div data-type="datetimepicker" data-device="" data-timepicker="false" data-set-value="" data-get="" data-format="Y-m-d" class="inline thin orange"></div>
+                                        <div data-type="datetimepicker" data-device="" data-timepicker="false"
+                                            data-set-value="" data-get="" data-format="Y-m-d"
+                                            class="inline thin orange"></div>
                                     </div>
 
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
@@ -117,11 +121,11 @@
                                         <div data-type="popup" data-height="400px" data-width="600px">
                                             <div class="bottom-space-3">
                                                 <div class="fa fa-table fa-2x"></div>
-                                                <div >Stromwertetabelle öffnen</div>
+                                                <div>Stromwertetabelle öffnen</div>
                                             </div>
                                             <div class="dialog">
                                                 <header>Stromwertetabelle</header>
-                                                <div class="sheet">
+                                                <div class="sheet-90">
                                                     <!-- Werktage Überschrift -->
                                                     <div class="row">
                                                         <div class="cell top-space-2">
@@ -345,7 +349,7 @@
                                         <div data-type="label" class="inline cell">Watt</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row-30">
                                     <div class="cell"></div>
                                     <div class="cell"></div>
@@ -390,7 +394,8 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;">Watt</div>
@@ -406,7 +411,8 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;"> Watt</div>
@@ -422,7 +428,8 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;"> Watt</div>
@@ -438,7 +445,8 @@
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label"
+                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;"></div>
                                     </div>
                                     <div class="cell">
                                         <div data-type="label" style="margin-right: 10px;"> Watt</div>
@@ -473,7 +481,7 @@
                                     <div class="cell center-align">
 
                                         <!-- Chart als kleine Ansicht zum Anklicken -->
-                                        <div data-type="popup" data-width="450px">
+                                        <div data-type="popup" data-width="700px" data-height="500">
                                             <div data-type="chart" data-device="MySpeedtest"
                                                 data-logdevice="FileLog_speedtest"
                                                 data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
@@ -482,10 +490,26 @@
 
                                                 <!-- Geöffnetes Popup mit Chart -->
                                                 <header>Popup</header>
-                                                <div data-type="chart" data-device="MySpeedtest"
-                                                    data-logdevice="FileLog_speedtest"
-                                                    data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
-                                                    data-maxvalue="130">
+                                                <div class="sheet-90">
+                                                    <div class="row">
+                                                        <div class="cell left-align">
+                                                            <div class="inline cell">Ansicht in:</div>
+                                                            <div class="inline w2x cell" data-type="select" data-device=""
+                                                                data-set="" data-list=""
+                                                                data-items='["weeks","months","years"]'
+                                                                data-alias='["Wochen","Monate","Jahre"]'>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="cell">
+                                                            <div data-type="chart" data-device="MySpeedtest"
+                                                                data-logdevice="FileLog_speedtest"
+                                                                data-columnspec="4:MySpeedtest.download:"
+                                                                data-minvalue="0" data-height="370" data-width="650" data-maxvalue="180">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
