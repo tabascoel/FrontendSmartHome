@@ -16,10 +16,10 @@
                 <Header>Sturmwarnung einschalten</header>
                 <!--Switchdevice zur Einstellung der Sturmwarnung-->
                 <div class="top-space-2" data-type="switch" data-icon="fa-toggle-on" data-device="SturmwarnungSchalter"
-                    style="font-size: xx-large;"></div>
+             style="font-size: xx-large;"></div>
             </li>
             <!--Widget Wetterwerte anzeigen-->
-            <li data-row="1" data-col="3" data-sizex="5" data-sizey="5">
+            <li data-row="1" data-col="3" data-sizex="5" data-sizey="4">
                 <Header>Wetterwerte</header>
                 <!-- Sheet Grundgerüst zur Aufteilung in Rows und Cells -->
                 <div class="sheet">
@@ -49,7 +49,7 @@
                 </div>
             </li>
             <!--Widget zum Anzeigen der Benutzernamen-->
-            <li data-row="2" data-col="2" data-sizex="5" data-sizey="5">
+            <li data-row="2" data-col="3" data-sizex="5" data-sizey="5">
                 <Header>Benutzernamen</Header>
                 <!-- Sheet Grundgerüst zur Aufteilung in Rows und Cells -->
                 <div class="sheet">
@@ -62,14 +62,14 @@
                         </div>
                         <div class="cell">
                             <!--Input Widget umd die Telegrammnamen zu ändern-->
-                            <div data-type="input" data-device="SturmwetterwarnungFHEM_bot" data-cmd="attr"
+                            <div data-type="input" type="number" data-device="SturmwetterwarnungFHEM_bot" data-cmd="attr"
                                 data-get="defaultPeer" data-set="defaultPeer" class="right-space-3"></div>
                         </div>
                     </div>
                 </div>
             </li>
             <!--Widget Strumschwellwerte-->
-            <li data-row="2" data-col="3" data-sizex="5" data-sizey="5">
+            <li data-row="2" data-col="2" data-sizex="5" data-sizey="6">
                 <Header>Sturmschwellwerte</header>
                 <!-- Sheet Grundgerüst zur Aufteilung in Rows und Cells -->
                 <div class="sheet">
@@ -79,7 +79,7 @@
                             <!--Schwellwert Windstärke-->
                             <div data-type="label">Bitte den Schwellwert der Windstärke eingeben:</div>
                             <!--Widget Input zum eingeben des Windstärken Schwellwertes-->
-                            <div class="top-space-2" data-type="input" data-set="Schwellwert_Windstaerke"></div>
+                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number" data-set="Schwellwert_Windstaerke"></div>
                         </div>
                         <div class="cell">
                             <!--Widget Knob, verschiebbarer Statusbalken für die Windstärke -->
@@ -95,9 +95,9 @@
                     <div class="row">
                         <div class="cell left-space-3">
                             <!--Schwellwert Windböe-->
-                            <div data-type="label">Bitte den Schwellwert der Windstärke eingeben:</div>
+                            <div data-type="label">Bitte den Schwellwert der Winböe eingeben:</div>
                             <!--Widget Input zum eingeben des Windböen Schwellwertes-->
-                            <div class="top-space-2" data-type="input" data-set="Schwellwert_Windboe"></div>
+                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number" data-set="Schwellwert_Windboe"></div>
                         </div>
                         <div class="cell">
                             <!--Widget Knob, verschiebbarer Statusbalken für die Windstärke -->
@@ -114,5 +114,4 @@
         </ul>
     </div>
 </body>
-
 </html>
