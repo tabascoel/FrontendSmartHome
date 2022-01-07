@@ -21,51 +21,56 @@
                             data-device="EinfachesHeizen" style="font-size: large;">
                         </div>
                     </div>
-                    <!--Row 2 Temperatursensor-->
+                    <!--Row 2 Periodische Ueberpruefung-->
                     <div class="row">
-                        <!--Label Widget anzeigen der aktuellen Temperatur-->
                         <div class="cell left-align left-space-2" data-type="label"> periodische Überprüfung
                             nach:
                         </div>
-                        <div class="cell center-align left-space-2" data-type="label" data-device="periodischeUeberpruefung">
+                        <!--Anzeigen des periodischen Werts-->
+                        <div class="cell center-align left-space-2" data-type="label"
+                            data-device="doif_UeberschreitenEnergieSchwellenwert" data-get="intervall">
                         </div>
                         <div class="cell left-align left-space-2 right-space-2" data-type="label"> Minuten
                         </div>
                         <div class="cell"></div>
                     </div>
-                    <!--Row 3 Temperatursensor-->
+                    <!--Row 3 Infrarotheizung enschalten ab-->
                     <div class="row">
-                        <!--Label Widget anzeigen der aktuellen Temperatur-->
                         <div class="cell left-align left-space-2" data-type="label">Einschalten der
                             Infrarotheizung nach:
                         </div>
-                        <div class="cell center-align left-space-2" data-type="label" data-device="">
+                        <!--Anzeigen der Minutenanzahl ab wann die Infrarotheizung eingeschalten wird-->
+                        <div class="cell center-align left-space-2" data-type="label" data-device="balkonkraftwerk"
+                            data-get="energieSchwellwert">
                         </div>
                         <div class="cell left-align left-space-2 right-space-2" data-type="label"> Watt
                         </div>
                         <div class="cell"></div>
                     </div>
-                    <!--Row 3 Temperatursensor-->
+                    <!--Row 3 Ueberhitzungsschutz-->
                     <div class="row">
-                        <!--Label Widget anzeigen der aktuellen Temperatur-->
                         <div class="cell left-align left-space-2" data-type="label"> Überhitzungsschutz nach:
                         </div>
-                        <div class="cell center-align left-space-2" data-type="label" data-device="">
+                        <!--Anzeigen der Minutenanzahl des Ueberhitzungsschut-->
+                        <div class="cell center-align left-space-2" data-type="label" data-device="doif_Heizung" data-get="on_time">
                         </div>
                         <div class="cell left-align left-space-2 right-space-2" data-type="label"> Minuten
                         </div>
                         <div class="cell"></div>
                     </div>
+                    <!--Row 4 Infrarotheizung ausschalten-->
                     <div class="row">
-                        <!--Label Widget anzeigen der aktuellen Temperatur-->
                         <div class="cell left-align left-space-2" data-type="label"> Die Infrarotheizung wird
+                            ausgeschalten
                             für: </div>
-                        <div class="cell center-align left-space-2" data-type="label" data-device="">
+                        <!--Anzeigen der Minutenanzahl ab wann die Heizung ausgeschalten wird-->
+                        <div class="cell center-align left-space-2" data-type="label" data-device="doif_disableTimer" data-get="off_time">
                         </div>
                         <div class="cell-20 left-align left-space-2 right-space-2" data-type="label"> Minuten
                         </div>
                         <div class="cell right-align left-space-2 right-space-2">
-                            <div data-type="popup" data-height="400px" data-width="900px">
+                            <!--Popup Widget-->
+                            <div data-type="popup" data-height="400px" data-width="700px">
                                 <div class="center-align">
                                     <div class="fa fa-table fa-2x "></div>
                                     <div>Konfigutationsdialog öffnen</div>
@@ -73,45 +78,77 @@
                                 <div class="dialog">
                                     <header>Infrarotheizung</header>
                                     <div class="sheet-90">
-                                        <div class="row-10 center-align">
-                                            <div class="cell" data-height="100px">
-                                                <div class="inline cell" data-type="label">Bitte den Schwellwert der
-                                                    periodischen Überprüfung eingeben:</div>
-                                                <div data-type="input" data-set="periodischeUeberpruefung" class="inline cell autoclear autoselect">
+                                        <div class="row">
+                                            <div class="cell left-space-3 right-space-2">
+                                                <div class="sheet">
+                                                    <!--Eingabe Schwellwert der periodischen Ueberpruefung-->
+                                                    <div class="row">
+                                                        <div class="cell-80">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert der
+                                                                periodischen Überprüfung eingeben:</div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input" class="w1x autoclear" data-cmd="setreading doif_UeberschreitenEnergieSchwellenwert intervall" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-12">
+                                                            <div data-type="label"> Minuten</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Eingabe des Schwellwert der Wattzahl-->
+                                                    <div class="row">
+                                                        <div class="cell-80">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert der Wattzahl eingeben
+                                                                wann die Heizung eingeschalten wird: </div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input" 
+                                                                class="w1x autoclear autoselect"
+                                                                data-cmd="setreading balkonkraftwerk energieSchwellwert">
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-12">
+                                                            <div class="cell" data-type="label">Watt
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Eingabe des Schwellwert der maximalen Laenge der Heizungslaufzeit-->
+                                                    <div class="row">
+                                                        <div class="cell-80">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert
+                                                                eingeben wie lange die Heizung am Stück laufen darf:
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input" data-cmd="setreading doif_UeberschreitenEnergieSchwellenwert intervall" class="w1x autoclear autoselect">
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-12">
+                                                            <div data-type="label">Minuten
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Eingabe des Schwellwert des Ueberhitzungsschutz-->
+                                                    <div class="row">
+                                                        <div class="cell-80">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert
+                                                                eingeben wie lange der Überhitzungsschutz an
+                                                                ist: </div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input" data-cmd="setreading doif_disableTimer off_time" class="w1x autoclear autoselect">
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-12">
+                                                            <div class="cell" data-type="label">Minuten
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div data-type="label" class="inline cell "> Minuten</div>
-                                            </div>
-                                        </div>
-                                        <div class="row-10 center-align">
-                                            <div class="cell" data-height="100px">
-                                                <div data-type="label" class="inline cell">Bitte die Wattzahl
-                                                    eingeben
-                                                    ab wann die Heizung eingeschalten wird: </div>
-                                                <div data-type="input" class="inline cell autoclear autoselect"></div>
-
-                                                <div class="inline cell" data-type="label">Watt
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="row-10 center-align">
-                                            <div class="cell" data-height="100px">
-                                                <div data-type="label" class="inline cell">Bitte den Schwellwert
-                                                    eingeben wie lange die Heizung am Stück laufen darf: </div>
-                                                <div data-type="input" class="inline cell autoclear autoselect"></div>
-                                                <div class="inline cell" data-type="label">Minuten
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-10 center-align">
-                                            <div class="cell" data-height="100px">
-                                                <div data-type="label" class="inline cell">Bitte den Schwellwert
-                                                    eingeben wie lange der Überhitzungsschutz an ist: </div>
-                                                <div data-type="input" class="inline cell autoclear autoselect"></div>
-
-                                                <div class="inline cell" data-type="label">Minuten
-                                                </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -120,7 +157,6 @@
                         </div>
                     </div>
                 </div>
-
             </li>
 
             <!--Widget fürs Optimierte Heizen-->
@@ -151,7 +187,7 @@
                         <div class="inline cell left-align left-space-2" data-type="label">Luftfeuchtigkeit:</div>
                         <!--Label Widget anzeigen der aktuellen Temperatur-->
                         <div class="inline cell left-align right-space-6" data-type="label"
-                            data-device="Temperatursensor" data-get="humidity">
+                            data-device="Temperatursensor" data-unit=" %" data-get="humidity">
                         </div>
                     </div>
 
@@ -165,7 +201,8 @@
                         </div>
 
                         <div class="inline cell display-bottomright bottom-space-2">
-                            <div data-type="popup" data-height="400px" data-width="800px">
+                            <!--Popup Widget-->
+                            <div data-type="popup" data-height="400px" data-width="650px">
                                 <div>
                                     <div class="fa fa-table fa-2x"></div>
                                     <div>Konfigutationsdialog öffnen</div>
@@ -173,70 +210,122 @@
                                 <div class="dialog">
                                     <header>Infrarotheizung</header>
                                     <div class="sheet-90">
+                                        <!--Einschalten der Infrarotheizung-->
                                         <div class="row">
-                                            <div class="cell-10 top-space-1" data-height="100px">
+                                            <div class="cell-10">
                                                 <div data-type="label">Infrarotheitzung einschalten:</div>
                                             </div>
                                         </div>
-
+                                        <!--Schwellwerte zum Einschalten der Infrarotheizung-->
                                         <div class="row">
-                                            <div class="cell left-align" data-height="100px">
-
-                                                <div data-type="label" class="inline w2x left-space-2 right-space-1">Temparatur:</div>
-                                                <div data-type="label" data-device="Schwellwert_Temperatur_Ein"
-                                                    data-unit=" C" class="inline w1x left-align left-space-2"> </div>
-
-                                                <div  data-type="label" class="inline w4x left-align">Bitte den Schwellwert der
-                                                    Temparatur eingeben:</div>
-                                                <div data-type="input" data-set="Schwellwert_Temperatur_Ein"
-                                                    class="inline cell w1x right-align autoclear">
+                                            <div class="cell left-space-3 right-space-2">
+                                                <div class="sheet">
+                                                    <!--Eingabe der Temperaturwerte wann die Infrarotheizung eingeschalten wird-->
+                                                    <div class="row">
+                                                        <div class="cell">
+                                                            <div data-type="label" class="left-align">
+                                                                Temparatur:</div>
+                                                        </div>
+                                                        <div class="cell-8">
+                                                            <div data-type="label"
+                                                                data-device="Schwellwert_Temperatur_Ein" data-unit=" C"
+                                                                class="left-align">
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-60">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert der
+                                                                Temparatur eingeben:</div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input" data-set="Schwellwert_Temperatur_Ein"
+                                                                class="w1x autoclear">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Eingabe der Luftfeuchtigkeit wann die Infrarotheizung eingeschalten wird-->
+                                                    <div class="row">
+                                                        <div class="cell">
+                                                            <div data-type="label" class="left-align">
+                                                                Luftfeuchtigkeit:
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-8">
+                                                            <div data-type="label"
+                                                                data-device="Schwellwert_Luftfeuchtigkeit_Ein"
+                                                                data-unit=" %" class="left-align"></div>
+                                                        </div>
+                                                        <div class="cell-60">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert der
+                                                                Luftfeuchtigkeit eingeben:
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input"
+                                                                data-set="Schwellwert_Luftfeuchtigkeit_Ein"
+                                                                class="w1x autoclear"></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="cell left-align" data-height="100px">
-                                                <div data-type="label" class="inline w2x left-space-2 right-space-1">Luftfeuchtigkeit:</div>
-                                                <div data-type="label" data-device="Schwellwert_Luftfeuchtigkeit_Ein"
-                                                    data-unit=" %" class="inline w1x left-align left-space-2"></div>
-
-                                                <div  data-type="label" class="inline w4x left-align">Bitte den Schwellwert der
-                                                    Luftfeuchtigkeit eingeben:
+                                            <div class="cell-10">
+                                                <div data-type="label">Infrarotheitzung einschalten:</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell left-space-3 right-space-2">
+                                                <div class="sheet">
+                                                    <!--Eingabe der Temperaturwerte wann die Infrarotheizung ausgeschalten wird-->
+                                                    <div class="row">
+                                                        <div class="cell">
+                                                            <div data-type="label" class="left-align">
+                                                                Temparatur:</div>
+                                                        </div>
+                                                        <div class="cell-8">
+                                                            <div data-type="label"
+                                                                data-device="Schwellwert_Temperatur_Aus" data-unit=" C"
+                                                                class="left-align">
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-60">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert der
+                                                                Temparatur eingeben:</div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input" data-set="Schwellwert_Temperatur_Aus"
+                                                                class="w1x autoclear">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Eingabe der Luftfeuchtigkeit wann die Infrarotheizung ausgeschalten wird-->
+                                                    <div class="row">
+                                                        <div class="cell">
+                                                            <div data-type="label" class="left-align">
+                                                                Luftfeuchtigkeit:
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell-8">
+                                                            <div data-type="label"
+                                                                data-device="Schwellwert_Luftfeuchtigkeit_Aus"
+                                                                data-unit=" %" class="left-align"></div>
+                                                        </div>
+                                                        <div class="cell-60">
+                                                            <div data-type="label" class="left-align">Bitte den
+                                                                Schwellwert der
+                                                                Luftfeuchtigkeit eingeben:
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div data-type="input"
+                                                                data-set="Schwellwert_Luftfeuchtigkeit_Aus"
+                                                                class="w1x autoclear"></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div data-type="input" data-set="Schwellwert_Luftfeuchtigkeit_Ein" class="inline cell w1x right-align autoclear"></div>
-                                                
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="cell-10 top-space-2" data-height="100px">
-                                                <div data-type="label">Infrarotheizung ausschalten:</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="cell left-align" data-height="100px">
-
-                                                <div data-type="label" class="inline w2x left-space-2 right-space-1">Temparatur:</div>
-                                                <div data-type="label" data-device="Schwellwert_Temperatur_Aus" data-unit=" C"
-                                                    class="inline w1x left-align left-space-2"></div>
-
-                                                <div class="inline w4x left-align" data-type="label">Bitte den Schwellwert der
-                                                    Temparatur eingeben:</div>
-                                                <div data-type="input" data-set="Schwellwert_Temperatur_Aus" class="inline cell w1x right-align autoclear"></div>
-                                               
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="cell left-align" data-height="100px">
-                                                <div data-type="label" class="inline w2x left-space-2 right-space-1">Luftfeuchtigkeit:</div>
-                                                <div data-type="label" data-device="Schwellwert_Luftfeuchtigkeit_Aus" data-unit=" %"
-                                                    class="inline w1x left-align left-space-2"></div>
-
-                                                <div class="inline w4x left-align" data-type="label">Bitte den Schwellwert der
-                                                    Luftfeuchtigkeit eingeben:
-                                                </div>
-                                                <div data-type="input" data-set="Schwellwert_Luftfeuchtigkeit_Aus" class="inline cell w1x right-align autoclear"></div>
-                                                
                                             </div>
                                         </div>
                                     </div>
@@ -696,7 +785,7 @@
 
                                                 <!-- Geöffnetes Popup mit Chart -->
                                                 <header>Popup</header>
-                                                <div class="sheet-90"> 
+                                                <div class="sheet-90">
                                                     <div class="row">
                                                         <div class="cell">
                                                             <!--<div data-type="chart" 
@@ -715,6 +804,8 @@
                                                             </div>
                                                         </div>
                                                     </div>-->
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -722,8 +813,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
             </li>
         </ul>
     </div>
