@@ -26,9 +26,11 @@
                         <div class="cell left-align left-space-2" data-type="label"> periodische Überprüfung
                             nach:
                         </div>
+
                         <!--Anzeigen des periodischen Werts-->
                         <div class="cell center-align left-space-2" data-type="label"
                             data-device="doif_UeberschreitenEnergieSchwellenwert" data-get="intervall">
+
                         </div>
                         <div class="cell left-align left-space-2 right-space-2" data-type="label"> Minuten
                         </div>
@@ -78,6 +80,7 @@
                                 <div class="dialog">
                                     <header>Infrarotheizung</header>
                                     <div class="sheet-90">
+
                                         <div class="row">
                                             <div class="cell left-space-3 right-space-2">
                                                 <div class="sheet">
@@ -148,6 +151,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -216,6 +220,7 @@
                                                 <div data-type="label">Infrarotheitzung einschalten:</div>
                                             </div>
                                         </div>
+
                                         <!--Schwellwerte zum Einschalten der Infrarotheizung-->
                                         <div class="row">
                                             <div class="cell left-space-3 right-space-2">
@@ -268,6 +273,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="row">
@@ -326,6 +332,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -409,7 +416,7 @@
 
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
                                     <div class="cell">
-                                        <div data-type="popup" data-height="400px" data-width="600px">
+                                        <div data-type="popup" data-height="600px" data-width="600px">
                                             <div class="bottom-space-3">
                                                 <div class="fa fa-table fa-2x"></div>
                                                 <div>Stromwertetabelle öffnen</div>
@@ -788,23 +795,23 @@
                                                 <div class="sheet-90">
                                                     <div class="row">
                                                         <div class="cell">
-                                                            <!--<div data-type="chart" 
-                                                                 data-device="MySpeedtest"
-                                                                data-ptype='["bars","bars","bars"]'
-                                                                data-logdevice='["FileLog_weeks","FileLog_months","FileLog_years"]'
-                                                                data-logfile='["weeks.log","moths.log","years.log"]'
-                                                                data-columnspec='["definition for how to find the values","",""]'
-                                                                data-timeranges=""
-                                                                data-yunit="Watt"
-                                                                data-daysago_end="now"
-                                                                data-daysago_start='["eeee","MMMM","yyyy"]'
-                                                                data-legend='["Wochen","Monate","Jahre"]'
-                                                                data-minvalue="0" data-maxvalue="auto"
-                                                                data-height="450" data-width="650">
+                                                            <div data-type="chart" data-device="barChart"
+                                                                data-ptype="bars" data-logdevice="FileLog_weeks"
+                                                                data-logfile="weeks.log"
+                                                                data-timeranges='[
+                                                                    ["Actual Year","0M","-12M"],
+                                                                    ["Last Year","12M","0M"],
+                                                                    ["Actual Month","0D","-31D"],
+                                                                    ["Last Month","31D","0D"],
+                                                                    ["Actual Week","0W","-1W"],
+                                                                    ["Last Week","1W","0W"]]' 
+                                                                    data-timeformat="dd.MM.yy"
+                                                                data-yunit="Watt" data-legend="Wochen"
+                                                                data-minvalue="0" data-maxvalue="auto" data-height="450"
+                                                                data-width="650">
                                                             </div>
                                                         </div>
-                                                    </div>-->
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
