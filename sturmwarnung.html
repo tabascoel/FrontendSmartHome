@@ -57,16 +57,14 @@
                         <div class="cell">
                             <!--Label Widget zum anzeigen der Telegrammnamen-->
                             <div class="top-space-2" data-type="label" data-device="SturmwetterwarnungFHEM_bot"
-                                data-cmd="attr" data-get="defaultPeer" id="UserNamen">
+                                 data-get="defaultPeer">
                             </div>
                         </div>
                         <div class="cell">
                             <!--Input Widget umd die Telegrammnamen zu ändern-->
                             <div data-type="input" type="number" data-device="SturmwetterwarnungFHEM_bot"
-                                data-cmd="attr" data-get="defaultPeer" id="sendTask"
-                                class="notransmit right-space-3"></div>
-                            <div data-type="link" class="round" data-cmd="SturmwetterwarnungFHEM_bot defaultPeer"
-                                data-set="addTask" data-value="#sendTask">OK</div>
+                                data-cmd="attr" data-get="defaultPeer" data-set="defaultPeer" 
+                                class="right-space-3"></div>
                         </div>
                     </div>
                 </div>
