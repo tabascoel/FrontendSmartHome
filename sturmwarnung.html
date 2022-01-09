@@ -16,7 +16,7 @@
                 <Header>Sturmwarnung einschalten</header>
                 <!--Switchdevice zur Einstellung der Sturmwarnung-->
                 <div class="top-space-2" data-type="switch" data-icon="fa-toggle-on" data-device="SturmwarnungSchalter"
-             style="font-size: xx-large;"></div>
+                    style="font-size: xx-large;"></div>
             </li>
             <!--Widget Wetterwerte anzeigen-->
             <li data-row="1" data-col="3" data-sizex="5" data-sizey="4">
@@ -62,8 +62,11 @@
                         </div>
                         <div class="cell">
                             <!--Input Widget umd die Telegrammnamen zu ändern-->
-                            <div data-type="input" type="number" data-device="SturmwetterwarnungFHEM_bot" data-cmd="attr"
-                                data-get="defaultPeer" data-set="defaultPeer" class="right-space-3"></div>
+                            <div data-type="input" type="number" data-device="SturmwetterwarnungFHEM_bot"
+                                data-cmd="attr" data-get="defaultPeer" id="sendTask"
+                                class="notransmit right-space-3"></div>
+                            <div data-type="link" class="round" data-cmd="SturmwetterwarnungFHEM_bot defaultPeer"
+                                data-set="addTask" data-value="#sendTask">OK</div>
                         </div>
                     </div>
                 </div>
@@ -79,7 +82,8 @@
                             <!--Schwellwert Windstärke-->
                             <div data-type="label">Bitte den Schwellwert der Windstärke eingeben:</div>
                             <!--Widget Input zum eingeben des Windstärken Schwellwertes-->
-                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number" data-set="Schwellwert_Windstaerke"></div>
+                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number"
+                                data-set="Schwellwert_Windstaerke"></div>
                         </div>
                         <div class="cell">
                             <!--Widget Knob, verschiebbarer Statusbalken für die Windstärke -->
@@ -97,7 +101,8 @@
                             <!--Schwellwert Windböe-->
                             <div data-type="label">Bitte den Schwellwert der Winböe eingeben:</div>
                             <!--Widget Input zum eingeben des Windböen Schwellwertes-->
-                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number" data-set="Schwellwert_Windboe"></div>
+                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number"
+                                data-set="Schwellwert_Windboe"></div>
                         </div>
                         <div class="cell">
                             <!--Widget Knob, verschiebbarer Statusbalken für die Windstärke -->
@@ -114,4 +119,5 @@
         </ul>
     </div>
 </body>
+
 </html>
