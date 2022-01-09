@@ -18,9 +18,9 @@
                             Heizens:
                         </div>
                         <div class="cell center-align" data-type="switch" data-icon="fa-toggle-on"
-                            data-device="EinfachesHeizen" style="font-size: large;" data-set-on="EinfachesHeizen"
-                            data-set-off="OptimiertesHeizen" data-get-on="EinfachesHeizen"
-                            data-get-off="!EinfachesHeizen">
+                            data-device="heizenModus" style="font-size: large;" data-set-on="einfach"
+                            data-set-off="aus" data-get-on="einfach"
+                            data-get-off="!einfach">
                         </div>
                     </div>
                     <!--Row 2 Periodische Ueberpruefung-->
@@ -182,9 +182,9 @@
                             Heizens:
                         </div>
                         <div class="inline cell left-align" data-type="switch" data-icon="fa-toggle-on"
-                            data-device="OptimiertesHeizenSchalter" style="font-size: large;"
-                            data-set-on="OptimiertesHeizen" data-set-off="EinfachesHeizen"
-                            data-get-on="OptimiertesHeizen" data-get-off="!OptimiertesHeizen">
+                            data-device="heizenModus" style="font-size: large;"
+                            data-set-on="optimierend" data-set-off="aus"
+                            data-get-on="optimierend" data-get-off="!optimierend">
                         </div>
                         <div class="inline cell display-topright top-space-4" data-type="label">Information: Die Logik
                             des einfachen Heizen ist mit integriert!</div>
@@ -218,7 +218,7 @@
 
                         <div class="inline cell display-bottomright bottom-space-2">
                             <!--Popup Widget-->
-                            <div data-type="popup" data-height="500px" data-width="650px" data-draggable="false">
+                            <div data-type="popup" data-height="510px" data-width="650px" data-draggable="false">
                                 <div>
                                     <div class="fa fa-table fa-2x"></div>
                                     <div>Konfigutationsdialog öffnen</div>
@@ -229,67 +229,46 @@
                                         <!--Einschalten der Infrarotheizung-->
                                         <div class="row-10 ">
                                             <div class="cell-10 top-space-1">
-                                                <div data-type="label">Infrarotheitzung einschalten:</div>
+                                                <div data-type="label">Infrarotheizung einschalten:</div>
                                             </div>
                                         </div>
 
                                         <!--Schwellwerte zum Einschalten der Infrarotheizung-->
                                         <div class="row-40 bottom-space-2">
                                             <div class="cell left-space-3 right-space-2">
-                                                <div class="sheet-90">
+                                                <div class="sheet-80">
                                                     <!--Eingabe der Temperaturwerte wann die Infrarotheizung eingeschalten wird-->
                                                     <div class="row-12">
-                                                        <div class="cell">
-                                                            <div data-type="label" class="left-align">
-                                                                Temparatur:</div>
-                                                        </div>
-                                                        <div class="cell-8">
-                                                            <div data-type="label"
-                                                                data-device="Schwellwert_Temperatur_Ein"
-                                                                data-unit=" %B0C%0A" class="left-align">
-                                                            </div>
-                                                        </div>
-                                                        <div class="cell-60">
+                                                        <div class="cell-70">
                                                             <div data-type="label" class="left-align">Bitte den
                                                                 Schwellwert der
                                                                 Temparatur eingeben:</div>
                                                         </div>
                                                         <div class="cell top-space-2">
                                                             <!--Thermostat Widget-->
-                                                            <div data-type="thermostat" data-device="Temperatursensor"
-                                                                data-get="Schwellwert_Temperatur_Ein"
-                                                                data-cmd="setreading"
-                                                                data-set="Schwellwert_Temperatur_Ein" data-unit="&deg;C"
-                                                                data-thickness="0.1" data-width="60" data-height="80" data-min="0"
-                                                                data-temp="temperature" class="w1x">
+                                                            <div data-type="thermostat"
+                                                                data-device="Schwellwert_Temperatur_Ein"
+                                                                data-get="state" data-cmd="set" data-set=""
+                                                                data-unit="&deg;C" data-thickness="0.1" data-width="60"
+                                                                data-height="80" data-min="0" class="w1x">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!--Eingabe der Luftfeuchtigkeit wann die Infrarotheizung eingeschalten wird-->
                                                     <div class="row-12">
-                                                        <div class="cell">
-                                                            <div data-type="label" class="left-align">
-                                                                Luftfeuchtigkeit:
-                                                            </div>
-                                                        </div>
-                                                        <div class="cell-8">
-                                                            <div data-type="label"
-                                                                data-device="Schwellwert_Luftfeuchtigkeit_Ein"
-                                                                data-unit=" %" class="left-align"></div>
-                                                        </div>
-                                                        <div class="cell-60">
+                                                        <div class="cell-70">
                                                             <div data-type="label" class="left-align">Bitte den
                                                                 Schwellwert der
                                                                 Luftfeuchtigkeit eingeben:
                                                             </div>
                                                         </div>
                                                         <div class="cell top-space-2">
-                                                            <div data-type="thermostat" data-device="Temperatursensor"
-                                                                data-get="Schwellwert_Luftfeuchtigkeit_Ein"
-                                                                data-cmd="setreading"
-                                                                data-set="Schwellwert_Luftfeuchtigkeit_Ein"
+                                                            <div data-type="thermostat"
+                                                                data-device="Schwellwert_Luftfeuchtigkeit_Ein"
+                                                                data-get="state" data-cmd="set" data-set=""
                                                                 data-thickness="0.1" data-temp="humidity" data-unit="%"
-                                                                data-max="100" data-width="60" data-height="80" data-min="0" class="w1x">
+                                                                data-max="100" data-width="60" data-height="80"
+                                                                data-min="0" class="w1x">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -299,69 +278,47 @@
                                         </div>
                                         <div class="row-10">
                                             <div class="cell-10">
-                                                <div data-type="label">Infrarotheitzung einschalten:</div>
+                                                <div data-type="label">Infrarotheizung einschalten:</div>
                                             </div>
                                         </div>
                                         <div class="row-40 bottom-space-2">
                                             <div class="cell left-space-3 right-space-2">
-                                                <div class="sheet-90">
+                                                <div class="sheet-80">
                                                     <!--Eingabe der Temperaturwerte wann die Infrarotheizung ausgeschalten wird-->
                                                     <div class="row-12">
-                                                        <div class="cell">
-                                                            <div data-type="label" class="left-align">
-                                                                Temparatur:</div>
-                                                        </div>
-                                                        <div class="cell-8">
-                                                            <div data-type="label"
-                                                                data-device="Schwellwert_Temperatur_Aus"
-                                                                data-unit="&deg;C" class="left-align">
-                                                            </div>
-                                                        </div>
-                                                        <div class="cell-60">
+                                                        <div class="cell-70">
                                                             <div data-type="label" class="left-align">Bitte den
                                                                 Schwellwert der
                                                                 Temparatur eingeben:</div>
                                                         </div>
                                                         <div class="cell top-space-2">
-                                                            <div data-type="thermostat" data-device="Temperatursensor"
-                                                                data-get="Schwellwert_Temperatur_Aus"
-                                                                data-cmd="setreading" data-min="0"
-                                                                data-set="Schwellwert_Temperatur_aus"
+                                                            <div data-type="thermostat"
+                                                                data-device="Schwellwert_Temperatur_Aus"
+                                                                data-get="state" data-cmd="set" data-set="" data-min="0"
                                                                 data-thickness="0.1" data-unit="&deg;C"
-                                                                data-temp="temperature" data-width="60" data-height="80" class="w1x">
+                                                                data-temp="temperature" data-width="60" data-height="80"
+                                                                class="w1x">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!--Eingabe der Luftfeuchtigkeit wann die Infrarotheizung ausgeschalten wird-->
                                                     <div class="row-12">
-                                                        <div class="cell">
-                                                            <div data-type="label" class="left-align">
-                                                                Luftfeuchtigkeit:
-                                                            </div>
-                                                        </div>
-                                                        <div class="cell-8">
-                                                            <div data-type="label"
-                                                                data-device="Schwellwert_Luftfeuchtigkeit_Aus"
-                                                                data-unit=" %" class="left-align"></div>
-                                                        </div>
-                                                        <div class="cell-60">
+                                                        <div class="cell-70">
                                                             <div data-type="label" class="left-align">Bitte den
                                                                 Schwellwert der
                                                                 Luftfeuchtigkeit eingeben:
                                                             </div>
                                                         </div>
                                                         <div class="cell top-space-2">
-                                                            <div data-type="thermostat" data-device="Temperatursensor"
-                                                                data-get="Schwellwert_Luftfeuchtigkeit_Aus"
-                                                                data-cmd="setreading"
-                                                                data-set="Schwellwert_Luftfeuchtigkeit_Aus" data-min="0"
+                                                            <div data-type="thermostat"
+                                                                data-device="Schwellwert_Luftfeuchtigkeit_Aus"
+                                                                data-get="state" data-cmd="set" data-set="" data-min="0"
                                                                 data-width="60" data-height="80" data-thickness="0.1"
                                                                 data-temp="humidity" data-unit="%" data-max="100"
                                                                 class="w1x">
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -370,6 +327,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </li>
 
             <!-- Widget Warmwasserboiler-->
