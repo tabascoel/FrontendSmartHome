@@ -547,16 +547,17 @@ section {
 
 .gridster > ul > li,
 .card {
-    background-color: #acacacb9;
+    background-color: #acacac;
 }
 
-.gridster > ul > li.round {
+.gridster > ul > li {
     border-radius: 17px;
 }
 
 .gridster li header,
 .dialog > header,
 .card > header {
+    border-radius: 17px  17px 0px 0px;
     background: #6b7a8f;
     color: #cccccc;
     display: block;
@@ -1929,12 +1930,12 @@ div[data-type="link"] > div.fa {
     z-index: 2000;
     width: 98%;
     border-bottom: 1px solid #aaa;
-    border-radius: 4px;
+    border-radius: 17px;
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #acacac;
     background-clip: padding-box;
-    overflow: auto;
+    overflow: none;
 }
 
 .dialog-close {
@@ -3099,13 +3100,38 @@ div[data-type="circlemenu"] div.circleborder {
     animation: blink 1s step-start 0s infinite;
     -webkit-animation: blink 1s step-start 0s infinite;
 }
-
-option {
-    background-color: #f7882f;
+.select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    outline: none;
 }
 
-select,
-input.textinput {
+.select_wrapper {
+    position: relative;   
+}
+
+.select_wrapper:after {
+    position: absolute;
+    right: 6px;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: inherit;
+    font-size: 150%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+option {
+    color: #636363;
+
+    background: transparent;
+}
+
+select{
     border-radius: 10px;
     border: 2px solid #f7882f;
     background: transparent;
@@ -3117,10 +3143,31 @@ input.textinput {
     font-size: 1em;
     color: white;
     outline:none;
+ 
+}
+
+
+
+
+
+input.textinput {
+    border-radius: 10px;
+    border: 2px solid #f7882f;
+    background: transparent;
+    width: 100%;
+    padding: 6px !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1em;
+    color: white;
+    
+    outline:none;
 }
 
 select::-ms-expand {
     display: none;
+   
 }
 
 .large > select {
@@ -3205,34 +3252,14 @@ select::-ms-expand {
     height: auto;
 }
 
+
+
 [class*='col-'][data-type="select"].select,
 [data-type="select"].select.col {
     height: 100%;
 }
 
-.select {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-}
 
-.select_wrapper {
-    position: relative;
-}
-
-.select_wrapper:after {
-    position: absolute;
-    right: 6px;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 900;
-    text-decoration: inherit;
-    font-size: 150%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
 
 [data-type="readingsgroup"] svg {
     height: 2em;
