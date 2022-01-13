@@ -338,8 +338,9 @@
 
                         <!-- Status Warmwasserboiler und Manuelle Bedienung -->
                         <div class="cell-20">
-                            <div data-type="switch" data-icon="fa-shower" style="font-size: large;" data-device="wasserBoiler" data-get-on="on"
-                            data-get-off="off" data-set-on="on" data-set-off="off"></div>
+                            <div data-type="switch" data-icon="fa-shower" style="font-size: large;"
+                                data-device="wasserBoiler" data-get-on="on" data-get-off="off" data-set-on="on"
+                                data-set-off="off"></div>
                         </div>
 
                         <!-- Betriebsmodi -->
@@ -361,29 +362,35 @@
 
                                     <!-- Betriebsmodus: Manueller Betrieb -->
                                     <div class="cell">
-                                        <div data-type="switch" data-icon="fa-power-off" data-device="wasserBoilerModus" data-set-on="manuell" data-set-off="manuell" data-get-on="manuell"
-                                        data-get-off="!manuell"></div>
+                                        <div data-type="switch" data-icon="fa-power-off" data-device="wasserBoilerModus"
+                                            data-set-on="manuell" data-set-off="manuell" data-get-on="manuell"
+                                            data-get-off="!manuell"></div>
                                         <div data-type="label">Manueller Betrieb</div>
                                     </div>
 
                                     <!-- Betriebsmodus: Feste Betriebszeit -->
                                     <div class="cell">
-                                        <div data-type="switch" data-icon="fa-hourglass-half" data-device="wasserBoilerModus" data-set-on="festeZeit" data-set-off="Manuell"
-                                        data-get-on="festeZeit" data-get-off="!festeZeit"></div>
+                                        <div data-type="switch" data-icon="fa-hourglass-half"
+                                            data-device="wasserBoilerModus" data-set-on="festeZeit"
+                                            data-set-off="Manuell" data-get-on="festeZeit" data-get-off="!festeZeit">
+                                        </div>
                                         <div data-type="label">Feste Betriebszeit</div>
                                     </div>
 
                                     <!-- Betriebsmodus: Stromwertetabelle -->
                                     <div class="cell">
-                                        <div data-type="switch" data-icon="fa-table" data-device="wasserBoilerModus" data-set-on="stromwert" data-set-off="Manuell"
-                                        data-get-on="stromwert" data-get-off="!stromwert"></div>
+                                        <div data-type="switch" data-icon="fa-table" data-device="wasserBoilerModus"
+                                            data-set-on="stromwert" data-set-off="Manuell" data-get-on="stromwert"
+                                            data-get-off="!stromwert"></div>
                                         <div data-type="label">Stromwertetabelle</div>
                                     </div>
 
                                     <!-- Betriebsmodus: Schwellwert -->
                                     <div class="cell">
-                                        <div data-type="switch" data-icon="fa-angle-right" data-device="wasserBoilerModus" data-set-on="schwellwert" data-set-off="Manuell"
-                                        data-get-on="schwellwert" data-get-off="!schwellwert"></div>
+                                        <div data-type="switch" data-icon="fa-angle-right"
+                                            data-device="wasserBoilerModus" data-set-on="schwellwert"
+                                            data-set-off="Manuell" data-get-on="schwellwert"
+                                            data-get-off="!schwellwert"></div>
                                         <div data-type="label">Schwellwert</div>
                                     </div>
                                 </div>
@@ -408,11 +415,10 @@
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
                                     <div class="cell">
                                         <div data-type="label" class="inline cell">Stromzeiten:</div>
-                                        <div data-type="select" class="w2x inline cell" 
-                                        data-alias='["Günstig","Günstig/Mittel"]' 
-                                        data-items='["0","1"]'
-                                        data-device="a_boiler_stromwert" data-get="modus" data-set="modus"
-                                        data-cmd="setreading"></div>
+                                        <div data-type="select" class="w2x inline cell"
+                                            data-alias='["Günstig","Günstig/Mittel"]' data-items='["0","1"]'
+                                            data-device="a_boiler_stromwert" data-get="modus" data-set="modus"
+                                            data-cmd="setreading"></div>
                                         <p></p>
                                         <div data-type="popup" data-height="600px" data-width="600px">
                                             <div class="bottom-space-3">
@@ -442,16 +448,15 @@
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
                                                                 data-device="stromwerttabelle" data-get="t1_off"
-                                                                data-cmd="setreading" data-set="t1_off"
-                                                                data-step="15" data-datepicker="false" data-format="H:i"
+                                                                data-cmd="setreading" data-set="t1_off" data-step="15"
+                                                                data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
                                                                 data-device="stromwerttabelle"
                                                                 data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]'
-                                                                data-get="t1" data-set="t1"
+                                                                data-items='["0","1","2"]' data-get="t1" data-set="t1"
                                                                 data-cmd="setreading">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
@@ -472,16 +477,15 @@
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
                                                                 data-device="stromwerttabelle" data-get="t2_off"
-                                                                data-cmd="setreading" data-set="t2_off"
-                                                                data-step="15" data-datepicker="false" data-format="H:i"
+                                                                data-cmd="setreading" data-set="t2_off" data-step="15"
+                                                                data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
                                                                 data-device="stromwerttabelle"
                                                                 data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]'
-                                                                data-get="t2" data-set="t2"
+                                                                data-items='["0","1","2"]' data-get="t2" data-set="t2"
                                                                 data-cmd="setreading">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
@@ -502,16 +506,15 @@
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
                                                                 data-device="stromwerttabelle" data-get="t3_off"
-                                                                data-cmd="setreading" data-set="t3_off"
-                                                                data-step="15" data-datepicker="false" data-format="H:i"
+                                                                data-cmd="setreading" data-set="t3_off" data-step="15"
+                                                                data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
                                                                 data-device="stromwerttabelle"
                                                                 data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]'
-                                                                data-get="t3" data-set="t3"
+                                                                data-items='["0","1","2"]' data-get="t3" data-set="t3"
                                                                 data-cmd="setreading">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
@@ -532,16 +535,15 @@
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
                                                                 data-device="stromwerttabelle" data-get="t4_off"
-                                                                data-cmd="setreading" data-set="t4_off"
-                                                                data-step="15" data-datepicker="false" data-format="H:i"
+                                                                data-cmd="setreading" data-set="t4_off" data-step="15"
+                                                                data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
                                                                 data-device="stromwerttabelle"
                                                                 data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]'
-                                                                data-get="t4" data-set="t4"
+                                                                data-items='["0","1","2"]' data-get="t4" data-set="t4"
                                                                 data-cmd="setreading">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
@@ -562,16 +564,15 @@
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
                                                                 data-device="stromwerttabelle" data-get="t5_off"
-                                                                data-cmd="setreading" data-set="t5_off"
-                                                                data-step="15" data-datepicker="false" data-format="H:i"
+                                                                data-cmd="setreading" data-set="t5_off" data-step="15"
+                                                                data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
                                                                 data-device="stromwerttabelle"
                                                                 data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]'
-                                                                data-get="t5" data-set="t5"
+                                                                data-items='["0","1","2"]' data-get="t5" data-set="t5"
                                                                 data-cmd="setreading">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
@@ -592,16 +593,15 @@
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
                                                                 data-device="stromwerttabelle" data-get="t6_off"
-                                                                data-cmd="setreading" data-set="t6_off"
-                                                                data-step="15" data-datepicker="false" data-format="H:i"
+                                                                data-cmd="setreading" data-set="t6_off" data-step="15"
+                                                                data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
                                                                 data-device="stromwerttabelle"
                                                                 data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]'
-                                                                data-get="t6" data-set="t6"
+                                                                data-items='["0","1","2"]' data-get="t6" data-set="t6"
                                                                 data-cmd="setreading">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
@@ -629,16 +629,15 @@
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
                                                                 data-device="stromwerttabelle" data-get="we_off"
-                                                                data-cmd="setreading" data-set="we_off"
-                                                                data-step="15" data-datepicker="false" data-format="H:i"
+                                                                data-cmd="setreading" data-set="we_off" data-step="15"
+                                                                data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
                                                                 data-device="stromwerttabelle"
                                                                 data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]'
-                                                                data-get="we" data-set="we"
+                                                                data-items='["0","1","2"]' data-get="we" data-set="we"
                                                                 data-cmd="setreading">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
@@ -655,7 +654,8 @@
                                     <div class="cell">
                                         <div data-type="label">Wasserboiler einschalten bei:</div>
                                         <div data-type="label" class="inline cell">></div>
-                                        <div data-type="input" class="w1x inline cell"></div>
+                                        <div data-type="input" class="w1x inline cell" data-device="wasserBoiler"
+                                            data-get="schwellwert" data-set="schwellwert" data-cmd="setreading"></div>
                                         <div data-type="label" class="inline cell">Watt</div>
                                     </div>
                                 </div>
@@ -685,7 +685,8 @@
                             <div class="sheet">
                                 <div class="row">
                                     <div class="cell-80">
-                                        <div data-type="label" style="margin-left: 5px;" data-device="" data-get="">Aktuell produzierter Strom:
+                                        <div data-type="label" style="margin-left: 5px;" data-device="" data-get="">
+                                            Aktuell produzierter Strom:
                                         </div>
                                     </div>
                                     <div class="cell">
