@@ -335,14 +335,12 @@
                                         <div data-type="label">Zeitraum festlegen:</div>
                                         <p></p>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_on"
-                                            data-timepicker="false" data-set="datum"
-                                            data-get="datum" data-format="d-m-Y" data-cmd="setreading"
-                                            class="inline thin"></div>
+                                            data-timepicker="false" data-set="datum" data-get="datum"
+                                            data-format="d-m-Y" data-cmd="setreading" class="inline thin"></div>
                                         <div data-type="label">bis</div>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_off"
-                                            data-timepicker="false" data-set="datum"
-                                            data-get="datum" data-format="d-m-Y" data-cmd="setreading"
-                                            class="inline thin"></div>
+                                            data-timepicker="false" data-set="datum" data-get="datum"
+                                            data-format="d-m-Y" data-cmd="setreading" class="inline thin"></div>
                                     </div>
 
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
@@ -843,18 +841,12 @@
                                                 <div class="sheet-90">
                                                     <div class="row">
                                                         <div class="cell">
-                                                            <div data-type="chart" data-device="barChart"
-                                                                data-ptype="bars" data-logdevice="FileLog_weeks"
-                                                                data-logfile="weeks.log" data-timeranges='[
-                                                                    ["Actual Year","0M","-12M"],
-                                                                    ["Last Year","12M","0M"],
-                                                                    ["Actual Month","0D","-31D"],
-                                                                    ["Last Month","31D","0D"],
-                                                                    ["Actual Week","0W","-1W"],
-                                                                    ["Last Week","1W","0W"]]'
-                                                                data-timeformat="dd.MM.yy" data-yunit="Watt"
-                                                                data-legend="Wochen" data-minvalue="0"
-                                                                data-maxvalue="auto" data-height="450" data-width="650">
+                                                            <div data-type="chart" data-device="balkonkraftwerk"
+                                                                data-ptype="bars" data-logdevice="fhem.db"
+                                                                data-logfile="HISTORY"
+                                                                data-columnspec="balkonkraftwerk:setData"
+                                                                data-minvalue="0" data-maxvalue="auto" data-height="450"
+                                                                data-width="650">
                                                             </div>
                                                         </div>
                                                     </div>
