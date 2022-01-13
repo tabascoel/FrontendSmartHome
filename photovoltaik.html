@@ -415,13 +415,14 @@
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
                                     <div class="cell">
                                         <div data-type="label" class="inline cell">Stromzeiten:</div>
-                                        <div data-type="select" class="w2x inline cell"
+                                        <div data-type="select" class="w2x  bottom-space-2"
                                             data-alias='["Günstig","Günstig/Mittel"]' data-items='["0","1"]'
                                             data-device="a_boiler_stromwert" data-get="modus" data-set="modus"
                                             data-cmd="setreading"></div>
                                         <p></p>
+                                        <p></p>
                                         <div data-type="popup" data-height="600px" data-width="600px">
-                                            <div class="bottom-space-3">
+                                            <div>
                                                 <div class="fa fa-table fa-2x"></div>
                                                 <div>Stromwertetabelle öffnen</div>
                                             </div>
@@ -429,188 +430,268 @@
                                                 <header>Stromwertetabelle</header>
                                                 <div class="sheet-90">
                                                     <!-- Werktage Überschrift -->
-                                                    <div class="row">
+                                                    <div class="row-8">
                                                         <div class="cell top-space-2">
                                                             <div data-type="label">Werktage Montag bis
                                                                 Freitag:</div>
                                                         </div>
                                                     </div>
-                                                    <!-- ROW1 -->
+                                                    <!-- Werte -->
                                                     <div class="row">
                                                         <div class="cell">
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t1_on"
-                                                                data-set="t1_on" data-cmd="setreading" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
+                                                            <div class="sheet">
+                                                                <!-- ROW1 -->
+                                                                <div class="row">
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t1_on" data-set="t1_on"
+                                                                            data-cmd="setreading" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">-</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t1_off" data-cmd="setreading"
+                                                                            data-set="t1_off" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div class="w2x thin" data-type="select"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-alias='["günstigster","mittlerer","teuerster"]'
+                                                                            data-items='["0","1","2"]' data-get="t1"
+                                                                            data-set="t1" data-cmd="setreading">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Preis pro KWh</div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- ROW 2 -->
+                                                                <div class="row">
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t2_on" data-set="t2_on"
+                                                                            data-cmd="setreading" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">-</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t2_off" data-cmd="setreading"
+                                                                            data-set="t2_off" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div class="w2x thin" data-type="select"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-alias='["günstigster","mittlerer","teuerster"]'
+                                                                            data-items='["0","1","2"]' data-get="t2"
+                                                                            data-set="t2" data-cmd="setreading">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Preis pro KWh</div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- ROW 3 -->
+                                                                <div class="row">
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t3_on" data-set="t3_on"
+                                                                            data-cmd="setreading" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">-</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t3_off" data-cmd="setreading"
+                                                                            data-set="t3_off" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div class="w2x thin" data-type="select"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-alias='["günstigster","mittlerer","teuerster"]'
+                                                                            data-items='["0","1","2"]' data-get="t3"
+                                                                            data-set="t3" data-cmd="setreading">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Preis pro KWh</div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- ROW 4 -->
+                                                                <div class="row">
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t4_on" data-set="t4_on"
+                                                                            data-cmd="setreading" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">-</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t4_off" data-cmd="setreading"
+                                                                            data-set="t4_off" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div class="w2x thin" data-type="select"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-alias='["günstigster","mittlerer","teuerster"]'
+                                                                            data-items='["0","1","2"]' data-get="t4"
+                                                                            data-set="t4" data-cmd="setreading">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Preis pro KWh</div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- ROW 5 -->
+                                                                <div class="row">
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t5_on" data-set="t5_on"
+                                                                            data-cmd="setreading" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">-</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t5_off" data-cmd="setreading"
+                                                                            data-set="t5_off" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div class="w2x thin" data-type="select"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-alias='["günstigster","mittlerer","teuerster"]'
+                                                                            data-items='["0","1","2"]' data-get="t5"
+                                                                            data-set="t5" data-cmd="setreading">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <divdata-type="label">Preis pro KWh
+                                                                    </div>
+                                                                </div>
+                                                                <!-- ROW 6 -->
+                                                                <div class="row">
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t6_on" data-set="t6_on"
+                                                                            data-cmd="setreading" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">-</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="t6_off" data-cmd="setreading"
+                                                                            data-set="t6_off" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div class="w2x thin" data-type="select"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-alias='["günstigster","mittlerer","teuerster"]'
+                                                                            data-items='["0","1","2"]' data-get="t6"
+                                                                            data-set="t6" data-cmd="setreading">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Preis pro KWh</div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class="inline cell">-</div>
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t1_off"
-                                                                data-cmd="setreading" data-set="t1_off" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device="stromwerttabelle"
-                                                                data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]' data-get="t1" data-set="t1"
-                                                                data-cmd="setreading">
-                                                            </div>
-                                                            <div class="inline cell" data-type="label">Preis
-                                                                pro
-                                                                KWh</div>
                                                         </div>
                                                     </div>
-                                                    <!-- ROW2 -->
-                                                    <div class="row">
-                                                        <div class="cell">
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t2_on"
-                                                                data-set="t2_on" data-cmd="setreading" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class="inline cell">-</div>
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t2_off"
-                                                                data-cmd="setreading" data-set="t2_off" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device="stromwerttabelle"
-                                                                data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]' data-get="t2" data-set="t2"
-                                                                data-cmd="setreading">
-                                                            </div>
-                                                            <div class="inline cell" data-type="label">Preis
-                                                                pro
-                                                                KWh</div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- ROW3 -->
-                                                    <div class="row">
-                                                        <div class="cell">
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t3_on"
-                                                                data-set="t3_on" data-cmd="setreading" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class="inline cell">-</div>
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t3_off"
-                                                                data-cmd="setreading" data-set="t3_off" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device="stromwerttabelle"
-                                                                data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]' data-get="t3" data-set="t3"
-                                                                data-cmd="setreading">
-                                                            </div>
-                                                            <div class="inline cell" data-type="label">Preis
-                                                                pro
-                                                                KWh</div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- ROW4 -->
-                                                    <div class="row">
-                                                        <div class="cell">
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t4_on"
-                                                                data-set="t4_on" data-cmd="setreading" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class="inline cell">-</div>
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t4_off"
-                                                                data-cmd="setreading" data-set="t4_off" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device="stromwerttabelle"
-                                                                data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]' data-get="t4" data-set="t4"
-                                                                data-cmd="setreading">
-                                                            </div>
-                                                            <div class="inline cell" data-type="label">Preis
-                                                                pro
-                                                                KWh</div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- ROW5 -->
-                                                    <div class="row">
-                                                        <div class="cell">
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t5_on"
-                                                                data-set="t5_on" data-cmd="setreading" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class="inline cell">-</div>
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t5_off"
-                                                                data-cmd="setreading" data-set="t5_off" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device="stromwerttabelle"
-                                                                data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]' data-get="t5" data-set="t5"
-                                                                data-cmd="setreading">
-                                                            </div>
-                                                            <div class="inline cell" data-type="label">Preis
-                                                                pro
-                                                                KWh</div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- ROW6 -->
-                                                    <div class="row">
-                                                        <div class="cell">
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t6_on"
-                                                                data-set="t6_on" data-cmd="setreading" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class="inline cell">-</div>
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="t6_off"
-                                                                data-cmd="setreading" data-set="t6_off" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device="stromwerttabelle"
-                                                                data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]' data-get="t6" data-set="t6"
-                                                                data-cmd="setreading">
-                                                            </div>
-                                                            <div class="inline cell" data-type="label">Preis
-                                                                pro
-                                                                KWh</div>
-                                                        </div>
-                                                    </div>
+
                                                     <!-- Wochenende Überschrift -->
-                                                    <div class="row">
+                                                    <div class="row-8">
                                                         <div class="cell top-space-2">
                                                             <div data-type="label">Wochenende Samstag und
                                                                 Sonntag:</div>
@@ -619,47 +700,64 @@
                                                     <!-- ROW1 -->
                                                     <div class="row">
                                                         <div class="cell">
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="we_on"
-                                                                data-set="we_on" data-cmd="setreading" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
+                                                            <div class="sheet">
+                                                                <div class="row">
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="we_on" data-set="we_on"
+                                                                            data-cmd="setreading" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">-</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="datetimepicker"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-get="we_off" data-cmd="setreading"
+                                                                            data-set="we_off" data-step="15"
+                                                                            data-datepicker="false" data-format="H:i"
+                                                                            class="thin">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Uhr</div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div class="w2x thin" data-type="select"
+                                                                            data-device="stromwerttabelle"
+                                                                            data-alias='["günstigster","mittlerer","teuerster"]'
+                                                                            data-items='["0","1","2"]' data-get="we"
+                                                                            data-set="we" data-cmd="setreading">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">
+                                                                        <div data-type="label">Preis pro KWh</div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class="inline cell">-</div>
-                                                            <div data-type="datetimepicker"
-                                                                data-device="stromwerttabelle" data-get="we_off"
-                                                                data-cmd="setreading" data-set="we_off" data-step="15"
-                                                                data-datepicker="false" data-format="H:i"
-                                                                class="inline thin cell">
-                                                            </div>
-                                                            <div class="inline cell">Uhr</div>
-                                                            <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device="stromwerttabelle"
-                                                                data-alias='["günstigster","mittlerer","teuerster"]'
-                                                                data-items='["0","1","2"]' data-get="we" data-set="we"
-                                                                data-cmd="setreading">
-                                                            </div>
-                                                            <div class="inline cell" data-type="label">Preis
-                                                                pro
-                                                                KWh</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <!-- Informationen Betriebsmodus: Schwellwert -->
                                     <div class="cell">
                                         <div data-type="label">Wasserboiler einschalten bei:</div>
                                         <div data-type="label" class="inline cell">></div>
                                         <div data-type="input" class="w1x inline cell" data-device="wasserBoiler"
-                                            data-get="schwellwert" data-set="schwellwert" data-cmd="setreading"></div>
+                                            data-get="schwellwert" data-set="schwellwert" data-cmd="setreading">
+                                        </div>
                                         <div data-type="label" class="inline cell">Watt</div>
                                     </div>
                                 </div>
-
                                 <div class="row-30">
                                     <div class="cell"></div>
                                     <div class="cell"></div>
@@ -685,12 +783,13 @@
                             <div class="sheet">
                                 <div class="row">
                                     <div class="cell-80">
-                                        <div data-type="label" style="margin-left: 5px;" data-device="" data-get="">
+                                        <div data-type="label" style="margin-left: 5px;">
                                             Aktuell produzierter Strom:
                                         </div>
                                     </div>
                                     <div class="cell">
-                                        <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label" data-device="" data-get=""
+                                            style="color: #6b7a8f; font-weight: bold;"></div>
                                     </div>
                                     <div class="cell left-align">
                                         <div data-type="label">Watt</div>
@@ -704,8 +803,9 @@
                                         <div data-type="label" style="margin-top: 5px;">Vorhergeneder Tag:</div>
                                     </div>
                                     <div class="cell">
-                                        <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label"
+                                        <div data-type="label" data-device="" data-get=""
+                                            style="color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label" data-device="" data-get=""
                                             style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
                                         </div>
                                     </div>
@@ -722,8 +822,9 @@
                                         <div data-type="label" style="margin-top: 5px;">Vorhergeneder Woche:</div>
                                     </div>
                                     <div class="cell">
-                                        <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label"
+                                        <div data-type="label" data-device="" data-get=""
+                                            style="color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label" data-device="" data-get=""
                                             style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
                                         </div>
                                     </div>
@@ -740,8 +841,9 @@
                                         <div data-type="label" style="margin-top: 5px;">Vorhergeneder Monat:</div>
                                     </div>
                                     <div class="cell">
-                                        <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label"
+                                        <div data-type="label" data-device="" data-get=""
+                                            style="color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label" data-device="" data-get=""
                                             style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
                                         </div>
                                     </div>
@@ -758,8 +860,9 @@
                                         <div data-type="label" style="margin-top: 5px;">Vorhergenedes Jahr:</div>
                                     </div>
                                     <div class="cell">
-                                        <div data-type="label" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label"
+                                        <div data-type="label" data-device="" data-get=""
+                                            style="color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label" data-device="" data-get=""
                                             style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
                                         </div>
                                     </div>
@@ -781,7 +884,8 @@
                                         <div class="sheet">
                                             <div class="row">
                                                 <div class="cell">
-                                                    <div class="w-30 right" data-type="input" data-device=""></div>
+                                                    <div class="w-30 right" data-type="input" data-device="" data-set=""
+                                                        data-get="" data-cmd="setreading"></div>
                                                 </div>
                                                 <div class="cell left-align">
                                                     <div data-type="label" style="margin-left: 10px;">Minuten</div>
