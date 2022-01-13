@@ -339,7 +339,11 @@
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
                                     <div class="cell">
                                         <div data-type="label" class="inline cell">Stromzeiten:</div>
-                                        <div data-type="select" class="w2x inline cell" data-items='["Günstig","Günstig/Mittel"]' data-device="" data-get="" data-set=""></div>
+                                        <div data-type="select" class="w2x inline cell" 
+                                        data-alias='["Günstig","Günstig/Mittel"]' 
+                                        data-items='["0","1"]'
+                                        data-device="a_boiler_stromwert" data-get="modus" data-set="modus"
+                                        data-cmd="setreading"></div>
                                         <p></p>
                                         <div data-type="popup" data-height="600px" data-width="600px">
                                             <div class="bottom-space-3">
