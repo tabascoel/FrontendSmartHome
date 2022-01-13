@@ -400,7 +400,7 @@
                                     <div class="cell"></div>
 
                                     <!-- Informationen Betriebsmodus: Feste Betriebszeit -->
-                                    <div class="cell">
+                                    <div class="cell top-align">
                                         <div data-type="label">Zeitraum festlegen:</div>
                                         <p></p>
                                         <div data-type="datetimepicker" data-device="" data-timepicker="false"
@@ -413,18 +413,16 @@
                                     </div>
 
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
-                                    <div class="cell">
-                                        <div data-type="label" class="inline cell">Stromzeiten:</div>
-                                        <div data-type="select" class="w2x  bottom-space-2"
+                                    <div class="cell top-align">
+                                        <div data-type="label" >Stromzeiten:</div>
+                                        <div data-type="select" class="w2x inline cell"
                                             data-alias='["Günstig","Günstig/Mittel"]' data-items='["0","1"]'
                                             data-device="a_boiler_stromwert" data-get="modus" data-set="modus"
                                             data-cmd="setreading"></div>
-                                        <p></p>
-                                        <p></p>
-                                        <div data-type="popup" data-height="600px" data-width="600px">
+                                        <div data-type="popup" class="top-space" data-height="600px" data-width="600px">
                                             <div>
                                                 <div class="fa fa-table fa-2x"></div>
-                                                <div>Stromwertetabelle öffnen</div>
+                                                <div>Stromwertetabelle</div>
                                             </div>
                                             <div class="dialog">
                                                 <header>Stromwertetabelle</header>
@@ -438,7 +436,7 @@
                                                     </div>
                                                     <!-- Werte -->
                                                     <div class="row">
-                                                        <div class="cell">
+                                                        <div class="cell top-align">
                                                             <div class="sheet">
                                                                 <!-- ROW1 -->
                                                                 <div class="row">
@@ -749,13 +747,13 @@
                                         </div>
                                     </div>
                                     <!-- Informationen Betriebsmodus: Schwellwert -->
-                                    <div class="cell">
-                                        <div data-type="label">Wasserboiler einschalten bei:</div>
-                                        <div data-type="label" class="inline cell">></div>
-                                        <div data-type="input" class="w1x inline cell" data-device="wasserBoiler"
+                                    <div class="cell top-align">
+                                        <div data-type="label" class="bottom-space">Wasserboiler einschalten bei:</div>
+                                        <div data-type="label" class="inline">></div>
+                                        <div data-type="input" class="w1x inline" data-device="wasserBoiler"
                                             data-get="schwellwert" data-set="schwellwert" data-cmd="setreading">
                                         </div>
-                                        <div data-type="label" class="inline cell">Watt</div>
+                                        <div data-type="label" class="inline">Watt</div>
                                     </div>
                                 </div>
                                 <div class="row-30">
