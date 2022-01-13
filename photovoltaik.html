@@ -339,7 +339,7 @@
                         <!-- Status Warmwasserboiler und Manuelle Bedienung -->
                         <div class="cell-20">
                             <div data-type="switch" data-icon="fa-shower" style="font-size: large;" data-device="wasserBoiler" data-get-on="on"
-                            data-get-off="off" data-set-on="on" data-set-off="off" data-lock="true"></div>
+                            data-get-off="off" data-set-on="on" data-set-off="off"></div>
                         </div>
 
                         <!-- Betriebsmodi -->
@@ -429,24 +429,24 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="TIMESPEC"
-                                                                data-set-value="*$v" data-cmd="modify" data-step="15"
+                                                                data-device="stromwerttabelle" data-get="t1_on"
+                                                                data-set-value="t1_on" data-cmd="modify" data-step="15"
                                                                 data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="onfortimer"
-                                                                data-cmd="setreading" data-set="onfortimer"
+                                                                data-device="stromwerttabelle" data-get="t1_0ff"
+                                                                data-cmd="setreading" data-set="t1_0ff"
                                                                 data-step="15" data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device=""
+                                                                data-device="stromwerttabelle"
                                                                 data-items='["günstigster","mittlerer","teuerster"]'
-                                                                data-get="input" data-set="input">
+                                                                data-get="t1" data-set="t1">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
                                                                 pro
@@ -457,24 +457,24 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="TIMESPEC"
-                                                                data-set-value="*$v" data-cmd="modify" data-step="15"
+                                                                data-device="stromwerttabelle" data-get="t2_0n"
+                                                                data-set-value="t2_0n" data-cmd="modify" data-step="15"
                                                                 data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="onfortimer"
-                                                                data-cmd="setreading" data-set="onfortimer"
+                                                                data-device="stromwerttabelle" data-get="t2_off"
+                                                                data-cmd="setreading" data-set="t2_off"
                                                                 data-step="15" data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device=""
+                                                                data-device="stromwerttabelle"
                                                                 data-items='["günstigster","mittlerer","teuerster"]'
-                                                                data-get="input" data-set="input">
+                                                                data-get="t2" data-set="t2">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
                                                                 pro
@@ -485,24 +485,24 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="TIMESPEC"
-                                                                data-set-value="*$v" data-cmd="modify" data-step="15"
+                                                                data-device="stromwerttabelle" data-get="t3_on"
+                                                                data-set-value="t3_on" data-cmd="modify" data-step="15"
                                                                 data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="onfortimer"
-                                                                data-cmd="setreading" data-set="onfortimer"
+                                                                data-device="stromwerttabelle" data-get="t3_off"
+                                                                data-cmd="setreading" data-set="t3_off"
                                                                 data-step="15" data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device=""
+                                                                data-device="stromwerttabelle"
                                                                 data-items='["günstigster","mittlerer","teuerster"]'
-                                                                data-get="input" data-set="input">
+                                                                data-get="t3" data-set="t3">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
                                                                 pro
@@ -513,24 +513,24 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="TIMESPEC"
-                                                                data-set-value="*$v" data-cmd="modify" data-step="15"
+                                                                data-device="stromwerttabelle" data-get="t4_on"
+                                                                data-set-value="t4_on" data-cmd="modify" data-step="15"
                                                                 data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="onfortimer"
-                                                                data-cmd="setreading" data-set="onfortimer"
+                                                                data-device="stromwerttabelle" data-get="t4_off"
+                                                                data-cmd="setreading" data-set="t4_off"
                                                                 data-step="15" data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device=""
+                                                                data-device="stromwerttabelle"
                                                                 data-items='["günstigster","mittlerer","teuerster"]'
-                                                                data-get="input" data-set="input">
+                                                                data-get="t4" data-set="t4">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
                                                                 pro
@@ -541,24 +541,24 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="TIMESPEC"
-                                                                data-set-value="*$v" data-cmd="modify" data-step="15"
+                                                                data-device="stromwerttabelle" data-get="t5_on"
+                                                                data-set-value="t5_on" data-cmd="modify" data-step="15"
                                                                 data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="onfortimer"
-                                                                data-cmd="setreading" data-set="onfortimer"
+                                                                data-device="stromwerttabelle" data-get="t5_off"
+                                                                data-cmd="setreading" data-set="t5_off"
                                                                 data-step="15" data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device=""
+                                                                data-device="stromwerttabelle"
                                                                 data-items='["günstigster","mittlerer","teuerster"]'
-                                                                data-get="input" data-set="input">
+                                                                data-get="t5" data-set="t5">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
                                                                 pro
@@ -569,24 +569,24 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="TIMESPEC"
-                                                                data-set-value="*$v" data-cmd="modify" data-step="15"
+                                                                data-device="stromwerttabelle" data-get="t6_on"
+                                                                data-set-value="t6_on" data-cmd="modify" data-step="15"
                                                                 data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="onfortimer"
-                                                                data-cmd="setreading" data-set="onfortimer"
+                                                                data-device="stromwerttabelle" data-get="t6_off"
+                                                                data-cmd="setreading" data-set="t6_off"
                                                                 data-step="15" data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device=""
+                                                                data-device="stromwerttabelle"
                                                                 data-items='["günstigster","mittlerer","teuerster"]'
-                                                                data-get="input" data-set="input">
+                                                                data-get="t6" data-set="t6">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
                                                                 pro
@@ -604,24 +604,24 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="TIMESPEC"
-                                                                data-set-value="*$v" data-cmd="modify" data-step="15"
+                                                                data-device="stromwerttabelle" data-get="we_on"
+                                                                data-set-value="we_on" data-cmd="modify" data-step="15"
                                                                 data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class="inline cell">-</div>
                                                             <div data-type="datetimepicker"
-                                                                data-device="BeforeGettingUp" data-get="onfortimer"
-                                                                data-cmd="setreading" data-set="onfortimer"
+                                                                data-device="stromwerttabelle" data-get="we_off"
+                                                                data-cmd="setreading" data-set="we_off"
                                                                 data-step="15" data-datepicker="false" data-format="H:i"
                                                                 class="inline thin orange cell">
                                                             </div>
                                                             <div class="inline cell">Uhr</div>
                                                             <div class=" inline w2x thin orange cell" data-type="select"
-                                                                data-device=""
+                                                                data-device="stromwerttabelle"
                                                                 data-items='["günstigster","mittlerer","teuerster"]'
-                                                                data-get="input" data-set="input">
+                                                                data-get="we" data-set="we">
                                                             </div>
                                                             <div class="inline cell" data-type="label">Preis
                                                                 pro
