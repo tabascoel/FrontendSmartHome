@@ -843,12 +843,11 @@
                                                         <div class="cell">
                                                             <div data-type="chart" data-device="balkonkraftwerk"
                                                                 data-ptype="bars" data-logdevice="logdb"
-                                                                data-get="STATE"
-                                                                data-logfile="history"
+                                                                data-get="STATE" data-logfile="history"
                                                                 data-columnspec="balkonkraftwerk:sendData"
-                                                                yunit="timestamp"
-                                                                data-minvalue="0" data-maxvalue="auto" data-height="450"
-                                                                data-width="650">
+                                                                yunit="timestamp" 
+                                                                data-timeranges='[["Aktual Week","0D","-7D"],["Last Week","7D","0D"]]'
+                                                                data-minvalue="0" data-maxvalue="auto" data-height="450" data-width="650">
                                                             </div>
                                                         </div>
                                                     </div>
