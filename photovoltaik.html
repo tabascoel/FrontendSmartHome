@@ -404,12 +404,12 @@
                                         <div data-type="label">Zeitraum festlegen:</div>
                                         <p></p>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_on"
-                                            data-timepicker="false" data-set="datum" data-get="datum"
-                                            data-format="d-m-Y" data-cmd="setreading" class="inline thin"></div>
+                                            data-timepicker="false" data-get="datum"
+                                            data-format="d-m-Y" data-cmd="modify" class="inline thin"></div>
                                         <div data-type="label">bis</div>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_off"
-                                            data-timepicker="false" data-set="datum" data-get="datum"
-                                            data-format="d-m-Y" data-cmd="setreading" class="inline thin"></div>
+                                            data-timepicker="false" data-set="TIMESPEC" data-get="datum"
+                                            data-format="d-m-Y" data-cmd="modify" class="inline thin"></div>
                                     </div>
 
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
@@ -815,9 +815,9 @@
                                         <div data-type="label" style="margin-top: 5px;">Vorhergeneder Tag:</div>
                                     </div>
                                     <div class="cell">
-                                        <div data-type="label" data-device="repBalkonkraftwerk" data-get="sum_day_sendData"
-                                            style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" data-device="repBalkonkraftwerk" data-get="repBalkonkraftwerk:1D"
+                                        <div data-type="label" data-device="repBalkonkraftwerk" data-cmd="set sumValue sum_day_sendData" data-get="sum_day_sendData"
+                                            data-refresh="" style="color: #6b7a8f; font-weight: bold;"></div>
+                                        <div data-type="label" data-device="repBalkonkraftwerk" data-cmd="setreading sum_day_sendData" data-get="sum_day_sendData"
                                             style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
                                         </div>
                                     </div>
