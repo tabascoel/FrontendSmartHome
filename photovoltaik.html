@@ -914,10 +914,10 @@
                                     <div class="cell center-align">
 
                                         <!-- Chart als kleine Ansicht zum Anklicken -->
-                                        <div data-type="popup" data-width="700px" data-height="500px">
-                                            <div data-type="chart" data-ptype="bars" data-device="MySpeedtest"
-                                                data-logdevice="FileLog_speedtest"
-                                                data-columnspec="4:MySpeedtest.download:" data-minvalue="0"
+                                        <div data-type="popup" data-width="1250px" data-height="1050px">
+                                            <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
+                                                data-logdevice="logdb" data-logfile="history"
+                                                data-columnspec="balkonkraftwerk:sum_day_sendData" data-minvalue="0"
                                                 data-maxvalue="130" data-width="180" data-height="130"></div>
                                             <div class="dialog">
 
@@ -932,9 +932,9 @@
                                                                 data-columnspec="balkonkraftwerk:sum_day_sendData"
                                                                 data-logfile="history" data-yunit="Watt"
                                                                 data-timeformat="dd"
-                                                                data-timeranges='[["Actual Week","0D","-7D"],["Last Week","7D","0D"],["Actual Month","0D","-31D"],["Last Month","31D","0D"]]'
-                                                                data-minvalue="0" data-maxvalue="auto" data-height="450"
-                                                                data-width="650">
+                                                                data-timeranges='[["Aktuelle Woche","0W","-1W"],["Vorherige Woche","1W","0W"],["Aktueller Monat","0M","-1M"],["Vorheriger Monat","1M","0M"],["Aktuelles Jahr","0Y","-1Y"],["Vorheriges Jahr","1Y","0Y"]]'
+                                                                data-minvalue="0" data-maxvalue="auto" data-height="1000"
+                                                                data-width="1200">
                                                             </div>
                                                         </div>
 
