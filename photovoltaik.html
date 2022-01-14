@@ -849,7 +849,8 @@
                                                                 data-columnspec="balkonkraftwerk:sum_day_sendData"
                                                                 data-logfile="history" data-yunit="Watt"
                                                                 data-timeformat="dd"
-                                                                data-timeranges='[["Wochenansicht","0W","-2W"],["Monatsansicht","0M","-2M"]]'
+                                                                data-crosshair="true"
+                                                                data-timeranges='[["Wochenansicht","2W","0W"],["Monatsansicht","2M","0M"]]'
                                                                 data-minvalue="0" data-maxvalue="auto" data-height="1000"
                                                                 data-width="1200">
                                                             </div>
@@ -878,10 +879,12 @@
                                                                 <div data-type="chart" data-ptype="bars"
                                                                     data-style="ftui l0fill" data-logdevice="logdb"
                                                                     data-device="balkonkraftwerk"
-                                                                    data-columnspec="balkonkraftwerk:sum-month_sendData"
+                                                                    data-columnspec="balkonkraftwerk:sum_month_sendData"
                                                                     data-logfile="history" data-yunit="Watt"
                                                                     data-timeformat="MMM"
-                                                                    data-timeranges='["Jahresansicht","0Y","-2Y"]'
+                                                                    data-crosshair="true"
+                                                                    data-daysago-start="2Y"
+                                                                    data-daysago-end="0Y"
                                                                     data-minvalue="0" data-maxvalue="auto" data-height="1000"
                                                                     data-width="1200">
                                                                 </div>
