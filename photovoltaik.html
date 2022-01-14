@@ -404,12 +404,12 @@
                                         <div data-type="label">Zeitraum festlegen:</div>
                                         <p></p>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_on"
-                                            data-timepicker="false" data-format="d-m-Y"data-get="datum" data-cmd="modify"
-                                            class="inline thin" data-cmd="modifyTimeSpec"></div>
+                                            data-timepicker="false" data-format="d-m-Y" data-get="datum"
+                                            data-cmd="setreading" data-set="datum" class="inline thin"></div>
                                         <div data-type="label">bis</div>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_off"
-                                            data-timepicker="false" data-set="TIMESPEC" data-get="datum"
-                                            data-cmd="modifyTimeSpec" data-format="d-m-Y" class="inline thin"></div>
+                                            data-timepicker="false" data-set="datum" data-get="datum"
+                                            data-cmd="setreading" data-format="d-m-Y" class="inline thin"></div>
                                     </div>
 
                                     <!-- Informationen Betriebsmodus: Stromwertetabelle -->
@@ -926,8 +926,9 @@
                                                 <div class="sheet-90">
                                                     <div class="row">
                                                         <div class="cell">
-                                                            <div data-type="chart" data-ptype="bars" data-style="ftui l0fill"
-                                                                data-logdevice="logdb" data-device="balkonkraftwerk"
+                                                            <div data-type="chart" data-ptype="bars"
+                                                                data-style="ftui l0fill" data-logdevice="logdb"
+                                                                data-device="balkonkraftwerk"
                                                                 data-columnspec="balkonkraftwerk:sum_day_sendData"
                                                                 data-logfile="history" data-yunit="Watt"
                                                                 data-timeformat="dd"
