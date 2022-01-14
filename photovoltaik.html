@@ -929,10 +929,10 @@
                                                             <div data-type="chart" data-ptype="bars"
                                                                 data-style="ftui l0fill" data-logdevice="logdb"
                                                                 data-device="balkonkraftwerk"
-                                                                data-columnspec='[["balkonkraftwerk:sum_day_sendData"],["balkonkraftwerk:sum_day_sendData"],["balkonkraftwerk:sum-month_sendData"]]'
+                                                                data-columnspec="balkonkraftwerk:sum_day_sendData"
                                                                 data-logfile="history" data-yunit="Watt"
                                                                 data-timeformat="dd"
-                                                                data-timeranges='[["Wochenansicht","0W","-2W"],["Monatsansicht","0M","-2M"],["Jahresansicht","0Y","-2Y"]]'
+                                                                data-timeranges='[["Wochenansicht","0W","-2W"],["Monatsansicht","0M","-2M"]]'
                                                                 data-minvalue="0" data-maxvalue="auto" data-height="1000"
                                                                 data-width="1200">
                                                             </div>
@@ -943,6 +943,38 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="cell center-align">
+    
+                                            <!-- Chart als kleine Ansicht zum Anklicken -->
+                                            <div data-type="popup" data-width="1250px" data-height="1050px">
+                                                <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
+                                                    data-logdevice="logdb" data-logfile="history"
+                                                    data-columnspec="balkonkraftwerk:sum_month_sendData" data-minvalue="0"
+                                                    data-maxvalue="auto" data-width="180" data-height="130"></div>
+                                                <div class="dialog">
+    
+                                                    <!-- Geöffnetes Popup mit Chart -->
+                                                    <header>Popup</header>
+                                                    <div class="sheet-90">
+                                                        <div class="row">
+                                                            <div class="cell">
+                                                                <div data-type="chart" data-ptype="bars"
+                                                                    data-style="ftui l0fill" data-logdevice="logdb"
+                                                                    data-device="balkonkraftwerk"
+                                                                    data-columnspec="balkonkraftwerk:sum-month_sendData"
+                                                                    data-logfile="history" data-yunit="Watt"
+                                                                    data-timeformat="MMM"
+                                                                    data-timeranges='["Jahresansicht","0Y","-2Y"]'
+                                                                    data-minvalue="0" data-maxvalue="auto" data-height="1000"
+                                                                    data-width="1200">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
