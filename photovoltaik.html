@@ -335,8 +335,8 @@
                                         <div data-type="label">Zeitraum festlegen:</div>
                                         <p></p>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_on"
-                                            data-timepicker="false" data-get="datum"
-                                             data-cmd="modify" class="inline thin"></div>
+                                            data-timepicker="false" data-get="datum" data-cmd="modify"
+                                            class="inline thin"></div>
                                         <div data-type="label">bis</div>
                                         <div data-type="datetimepicker" data-device="a_boiler_zeit_off"
                                             data-timepicker="false" data-set="TIMESPEC" data-get="datum"
@@ -732,9 +732,11 @@
                                         <div data-type="label" style="margin-top: 5px;">Vorhergeneder Tag:</div>
                                     </div>
                                     <div class="cell">
-                                        <div data-type="label" data-device="repBalkonkraftwerk" data-cmd="set sumValue sum_day_sendData" data-get="sum_day_sendData"
+                                        <div data-type="label" data-device="repBalkonkraftwerk"
+                                            data-cmd="set sumValue sum_day_sendData" data-get="sum_day_sendData"
                                             data-refresh="" style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" data-device="repBalkonkraftwerk" data-cmd="setreading sum_day_sendData" data-get="sum_day_sendData"
+                                        <div data-type="label" data-device="repBalkonkraftwerk"
+                                            data-cmd="setreading sum_day_sendData" data-get="sum_day_sendData"
                                             style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
                                         </div>
                                     </div>
@@ -841,16 +843,15 @@
                                                 <div class="sheet-90">
                                                     <div class="row">
                                                         <div class="cell">
-                                                            <div data-type="chart" data-device="balkonkraftwerk"
-                                                                data-ptype="bars" data-logdevice="logdb"
-                                                                data-get="STATE" data-logfile="history"
-                                                                data-columnspec="repBalkonkraftwerk:sum_day_sendData"
-                                                                data-yunit="Watt"
-                                                                data-daysago-start=""
-                                                                data-daysago-end=""
+                                                            <div data-type="chart" data-ptype="bars"
+                                                                data-logdevice="logdb" data-device="balkonkraftwerk"
+                                                                data-columnspec="balkonkraftwerk:sum_day_sendData"
+                                                                data-logfile="history" data-yunit="Watt"
+                                                                data-daysago-start="7d" data-daysago-end="now"
                                                                 data-timeformat="dd.MM.yy"
-                                                                data-timeranges='[["Aktual Week","0D","-7D"],["Last Week","7D","0D"]]'
-                                                                data-minvalue="0" data-maxvalue="auto" data-height="450" data-width="650">
+                                                                data-timeranges='[["Actual Week","0D","-7D"],["Last Week","7D","0D"]]'
+                                                                data-minvalue="0" data-maxvalue="auto" data-height="450"
+                                                                data-width="650">
                                                             </div>
                                                         </div>
                                                     </div>
