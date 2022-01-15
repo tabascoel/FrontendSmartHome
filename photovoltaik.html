@@ -826,16 +826,19 @@
                                     </div>
                                 </div>
 
-                                <!-- Popup Chart -->
+                                <!-- Popup Chart Wochenansicht-->
                                 <div class="row">
                                     <div class="cell center-align">
 
                                         <!-- Chart als kleine Ansicht zum Anklicken -->
                                         <div data-type="popup" data-width="1250px" data-height="1050px">
                                             <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
-                                                data-logdevice="logdb" data-logfile="history"
-                                                data-columnspec="balkonkraftwerk:sum_day_sendData" data-minvalue="0"
-                                                data-maxvalue="auto" data-width="180" data-height="130"></div>
+                                                class="nobuttons" data-logdevice="logdb" data-logfile="history"
+                                                data-style="ftui l0fill" data-daysago-start="3d" data-daysago-end="-2"
+                                                data-notfulldays="true"
+                                                data-columnspec="balkonkraftwerk:sum_day_sendData"
+                                                data-title="Wochenansicht" data-minvalue="0" data-maxvalue="auto"
+                                                data-width="140" data-height="85"></div>
                                             <div class="dialog">
 
                                                 <!-- Geöffnetes Popup mit Chart -->
@@ -844,14 +847,15 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="chart" data-ptype="bars"
-                                                                data-style="ftui l0fill" data-logdevice="logdb"
-                                                                data-device="balkonkraftwerk"
+                                                                data-title="Wochenansicht" data-style="ftui l0fill"
+                                                                data-logdevice="logdb" data-device="balkonkraftwerk"
                                                                 data-columnspec="balkonkraftwerk:sum_day_sendData"
                                                                 data-logfile="history" data-yunit="Watt"
                                                                 data-timeformat="dd.MM.yy" data-crosshair="true"
-                                                                data-timeranges='[["Wochenansicht","2W","0W"],["Monatsansicht","2M","0M"]]'
-                                                                data-minvalue="0" data-maxvalue="auto"                                                              
-                                                                data-height="1000" data-width="1200">
+                                                                data-daysago-start="1w" data-notfulldays="true"
+                                                                data-daysago-end="-2" data-minvalue="0"
+                                                                data-maxvalue="auto" data-height="1000"
+                                                                data-width="1200">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -860,16 +864,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
 
+                                <!-- Popup Chart Monatsansicht-->
+                                <div class="row">
                                     <div class="cell center-align">
 
                                         <!-- Chart als kleine Ansicht zum Anklicken -->
                                         <div data-type="popup" data-width="1250px" data-height="1050px">
                                             <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
-                                                data-logdevice="logdb" data-logfile="history"
-                                                data-columnspec="balkonkraftwerk:sum_month_sendData" data-minvalue="0"
-                                                data-maxvalue="auto" data-width="180" data-height="130"></div>
+                                                class="nobuttons" data-logdevice="logdb" data-logfile="history"
+                                                data-style="ftui l0fill" data-daysago-start="3d" data-daysago-end="-2"
+                                                data-notfulldays="true"
+                                                data-columnspec="balkonkraftwerk:sum_day_sendData"
+                                                data-title="Monatsansicht" data-minvalue="0" data-maxvalue="auto"
+                                                data-width="140" data-height="85"></div>
                                             <div class="dialog">
 
                                                 <!-- Geöffnetes Popup mit Chart -->
@@ -878,14 +886,54 @@
                                                     <div class="row">
                                                         <div class="cell">
                                                             <div data-type="chart" data-ptype="bars"
-                                                                data-style="ftui l0fill" data-logdevice="logdb"
-                                                                data-device="balkonkraftwerk"
-                                                                data-columnspec="balkonkraftwerk:sum_month_sendData"
+                                                                data-title="Monatsansicht" data-style="ftui l0fill"
+                                                                data-logdevice="logdb" data-device="balkonkraftwerk"
+                                                                data-columnspec="balkonkraftwerk:sum_day_sendData"
+                                                                data-logfile="history" data-yunit="Watt"
+                                                                data-timeformat="dd.MM.yy" data-crosshair="true"
+                                                                data-daysago-start="1m" data-notfulldays="true"
+                                                                data-daysago-end="-2" data-minvalue="0"
+                                                                data-maxvalue="auto" data-height="1000"
+                                                                data-width="1200">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Popup Chart Jahresansicht-->
+                                <div class="row">
+                                    <div class="cell center-align">
+
+                                        <!-- Chart als kleine Ansicht zum Anklicken -->
+                                        <div data-type="popup" data-width="1250px" data-height="1050px">
+                                            <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
+                                                data-title="Jahresansicht" data-logdevice="logdb" data-logfile="history"
+                                                data-style="ftui l0fill" data-daysago-start="6m" data-daysago-end="-2"
+                                                data-notfulldays="true" class="nobuttons"
+                                                data-columnspec="balkonkraftwerk:sum_month_sum_day_sendData"
+                                                data-minvalue="0" data-maxvalue="auto" data-width="140"
+                                                data-height="85"></div>
+                                            <div class="dialog">
+
+                                                <!-- Geöffnetes Popup mit Chart -->
+                                                <header>Popup</header>
+                                                <div class="sheet-90">
+                                                    <div class="row">
+                                                        <div class="cell">
+                                                            <div data-type="chart" data-ptype="bars"
+                                                                data-title="Jahresansicht" data-style="ftui l0fill"
+                                                                data-logdevice="logdb" data-device="balkonkraftwerk"
+                                                                data-columnspec="balkonkraftwerk:sum_month_sum_day_sendData"
                                                                 data-logfile="history" data-yunit="Watt"
                                                                 data-timeformat="MMM.yy" data-crosshair="true"
-                                                                data-daysago-start="2Y" data-daysago-end="0Y"
-                                                                data-minvalue="0" data-maxvalue="auto"
-                                                                data-height="1000" data-width="1200">
+                                                                data-daysago-start="6m" data-notfulldays="true"
+                                                                data-daysago-end="-2" data-minvalue="0"
+                                                                data-maxvalue="auto" data-height="1000"
+                                                                data-width="1200">
                                                             </div>
                                                         </div>
                                                     </div>
