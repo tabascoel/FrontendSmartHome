@@ -10,14 +10,14 @@
 }
 /* Definition of the axes generally*/
 .text.axes {
-	fill: #888;
+	fill: rgb(5, 5, 5);
 	font-size: 10px;
 }
 /* Definition of the axes generally*/
 .text.axes.major {
 	font-size: 10px;
 	font-weight: bold;
-	fill: #aaa;
+	fill: rgb(5, 5, 5);
 }
 /* Definition of specialities for x-axis */
 .xaxis {
@@ -99,7 +99,8 @@ g.crosshair {
 }
  
 .fullsize {
-    height: calc(100% - 2em) !important;
+    height: calc(100% - 1em) !important;
+	width: calc(100% - 1em) !important;
 }
 
 .graph_shadow {
