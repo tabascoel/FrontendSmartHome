@@ -28,7 +28,7 @@
                         <div class="cell left-align left-space-2" data-type="label">Windgeschwindigkeit:</div>
                         <!--Label Widget anzeigen der aktuellen Windstärke-->
                         <div class="cell center-align" data-type="label" data-device="SensorDaten"
-                            data-get="Windgeschwindigkeit">
+                            data-get="Windgeschwindigkeit" data-unit="km/h">
                         </div>
                     </div>
                     <!--Row 2 Windrichtung-->
@@ -36,7 +36,7 @@
                         <div class="cell left-align left-space-2" data-type="label">Windrichtung:</div>
                         <!--Label Widget anzeigen der Windrichtung-->
                         <div class="cell center-align" data-type="label" data-device="SensorDaten"
-                            data-get="Windrichtung">
+                            data-get="Windrichtung" data-unit="km/h">
                         </div>
                     </div>
                     <!--Row 3 Windböe-->
@@ -57,14 +57,14 @@
                         <div class="cell">
                             <!--Label Widget zum anzeigen der Telegrammnamen-->
                             <div class="top-space-2" data-type="label" data-device="SturmwetterwarnungFHEM_bot"
-                                 data-get="defaultPeer">
+                                data-get="defaultPeer" data-refresh="1">
                             </div>
                         </div>
                         <div class="cell">
                             <!--Input Widget umd die Telegrammnamen zu ändern-->
                             <div data-type="input" type="number" data-device="SturmwetterwarnungFHEM_bot"
-                                data-cmd="attr" data-get="defaultPeer" data-set="defaultPeer" 
-                                class="right-space-3"></div>
+                                data-cmd="attr" data-get="defaultPeer" data-set="defaultPeer" class="right-space-3">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,10 +78,11 @@
                     <div class="row">
                         <div class="cell left-space-3">
                             <!--Schwellwert Windstärke-->
-                            <div data-type="label">Bitte den Schwellwert der Windstärke eingeben:</div>
+                            <div data-type="label">Bitte den Schwellwert der Windgeschwindigkeit eingeben:</div>
                             <!--Widget Input zum eingeben des Windstärken Schwellwertes-->
-                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number"
-                                data-set="Schwellwert_Windstaerke"></div>
+                            <div class="top-space-2 autoclear autoselect" data-type="input" id="myInput"
+                                data-set="Schwellwert_Windstaerke" ></div>
+                            <div data-type="label" id="fehler" class="top-space red"></div>
                         </div>
                         <div class="cell">
                             <!--Widget Knob, verschiebbarer Statusbalken für die Windstärke -->
@@ -99,7 +100,7 @@
                             <!--Schwellwert Windböe-->
                             <div data-type="label">Bitte den Schwellwert der Winböe eingeben:</div>
                             <!--Widget Input zum eingeben des Windböen Schwellwertes-->
-                            <div class="top-space-2 autoclear autoselect" data-type="input" type="number"
+                            <div class="top-space-2 autoclear autoselect" data-type="input"
                                 data-set="Schwellwert_Windboe"></div>
                         </div>
                         <div class="cell">
@@ -114,7 +115,25 @@
                     </div>
                 </div>
             </li>
+<!--
+            <script>
+                var input = document.getElementById("myInput");
+                input.addEventListener("keyup", function (event) {
+                    if (event.keyCode === 13) {
+                        var DataVal = input.value;
+                        document.getElementById("myInput").value = DataVal.replace(/[^0-9]/g,'');
+                       
+
+                        
+                    }
+                });
+
+            </script>-->
+
+
         </ul>
+
+
     </div>
 </body>
 
