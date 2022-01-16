@@ -63,7 +63,7 @@
                         <div class="cell">
                             <!--Input Widget umd die Telegrammnamen zu ändern-->
                             <div data-type="input" type="number" data-device="SturmwetterwarnungFHEM_bot"
-                                data-cmd="attr" data-get="defaultPeer" data-set="defaultPeer" class="right-space-3">
+                                data-cmd="attr defaultPeer" data-get="defaultPeer"  class="right-space-3">
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                             <div data-type="label">Bitte den Schwellwert der Windgeschwindigkeit eingeben:</div>
                             <!--Widget Input zum eingeben des Windstärken Schwellwertes-->
                             <div class="top-space-2 autoclear autoselect" data-type="input" id="myInput"
-                                data-set="Schwellwert_Windstaerke" ></div>
+                                data-set="Schwellwert_Windstaerke" data-part="([\-\d\d\,\d]+)"></div>
                             <div data-type="label" id="fehler" class="top-space red"></div>
                         </div>
                         <div class="cell">
