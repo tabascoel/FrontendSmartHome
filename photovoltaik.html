@@ -711,7 +711,7 @@
                             <!-- Aktuelle produzierter Strom -->
                             <div class="sheet">
                                 <div class="row">
-                                    <div class="cell-80">
+                                    <div class="cell-60">
                                         <div data-type="label" style="margin-left: 5px;">
                                             Aktuell produzierter Strom:
                                         </div>
@@ -724,113 +724,17 @@
                                         <div data-type="label">Watt</div>
                                     </div>
                                 </div>
-
-                                <!-- Aktueller und Vorhergehender Tag -->
-                                <div class="row">
-                                    <div class="cell ">
-                                        <div data-type="label">Aktueller Tag:</div>
-                                        <div data-type="label" style="margin-top: 5px;">Vorhergehender Tag:</div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" data-device="balkonkraftwerk" data-logfile="history"
-                                            data-logdevice="logdb" data-get='["balkonkraftwerk:sum_day_sendData"]'
-                                            style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" data-device="balkonkraftwerk" data-logfile="history"
-                                            data-logdevice="logdb"
-                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" style="margin-right: 10px;">Watt</div>
-                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;">Watt</div>
-                                    </div>
-                                </div>
-
-                                <!-- Aktuelle und Vorhergehende Woche -->
-                                <div class="row">
-                                    <div class="cell">
-                                        <div data-type="label">Aktuelle Woche:</div>
-                                        <div data-type="label" style="margin-top: 5px;">Vorhergehende Woche:</div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" data-device="repBalkonkraftwerk" data-get="sendData"
-                                            style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" data-device="repBalkonkraftwerk" data-get="sendData:1D"
-                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
-                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;"> Watt</div>
-                                    </div>
-                                </div>
-
-                                <!-- Aktueller und Vorhergehender Monat -->
-                                <div class="row">
-                                    <div class="cell">
-                                        <div data-type="label">Aktueller Monat:</div>
-                                        <div data-type="label" style="margin-top: 5px;">Vorhergehender Monat:</div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" data-device="" data-get=""
-                                            style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" data-device="" data-get=""
-                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
-                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;"> Watt</div>
-                                    </div>
-                                </div>
-
-                                <!-- Aktuelles und Vorhergehendes Jahr -->
-                                <div class="row">
-                                    <div class="cell">
-                                        <div data-type="label">Aktuelles Jahr:</div>
-                                        <div data-type="label" style="margin-top: 5px;">Vorhergehendes Jahr:</div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" data-device="" data-get=""
-                                            style="color: #6b7a8f; font-weight: bold;"></div>
-                                        <div data-type="label" data-device="" data-get=""
-                                            style="margin-top: 5px; color: #6b7a8f; font-weight: bold;">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div data-type="label" style="margin-right: 10px;"> Watt</div>
-                                        <div data-type="label" style="margin-top: 5px; margin-right: 10px;"> Watt</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Aktualisierungsintervall für die Stromdatentabelle -->
+                    <div class="row">
                         <div class="cell">
                             <div class="sheet">
-                                <div class="row-10">
-                                    <div class="cell top-space-2">
-                                        <div data-type="label">Aktualisierungsintervall:
-                                        </div>
-                                        <div class="sheet">
-                                            <div class="row">
-                                                <div class="cell">
-                                                    <div class="w-30 right" data-type="input" data-value="5"
-                                                        data-device="" data-set="" data-get="" data-cmd="setreading">
-                                                    </div>
-                                                </div>
-                                                <div class="cell left-align">
-                                                    <div data-type="label" style="margin-left: 10px;">Minuten</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Popup Chart Wochenansicht-->
                                 <div class="row">
-                                    <div class="cell center-align">
 
+                                    <!-- Popup Chart Wochenansicht-->
+                                    <div class="cell center-align">
                                         <!-- Chart als kleine Ansicht zum Anklicken -->
                                         <div data-type="popup" data-width="70%" data-height="70%">
                                             <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
@@ -838,7 +742,7 @@
                                                 data-style="ftui l0fill" class="nobuttons" data-daysago_start="3d"
                                                 data-daysago_end="-2" data-nofulldays="true"
                                                 data-columnspec="balkonkraftwerk:sum_day_sendData" data-minvalue="0"
-                                                data-maxvalue="auto" data-width="140" data-height="85"></div>
+                                                data-maxvalue="auto" data-width="180" data-height="120"></div>
                                             <div class="dialog">
 
                                                 <!-- Geöffnetes Popup mit Chart -->
@@ -862,12 +766,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- Popup Chart Monatsansicht-->
-                                <div class="row">
+                                    <!-- Popup Chart Monatsansicht-->
                                     <div class="cell center-align">
-
                                         <!-- Chart als kleine Ansicht zum Anklicken -->
                                         <div data-type="popup" data-width="70%" data-height="70%">
                                             <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
@@ -875,7 +775,7 @@
                                                 data-style="ftui l0fill" class="nobuttons" data-daysago_start="3d"
                                                 data-daysago_end="-2" data-nofulldays="true"
                                                 data-columnspec="balkonkraftwerk:sum_day_sendData" data-minvalue="0"
-                                                data-maxvalue="auto" data-width="140" data-height="85"></div>
+                                                data-maxvalue="auto" data-width="180" data-height="120"></div>
                                             <div class="dialog">
 
                                                 <!-- Geöffnetes Popup mit Chart -->
@@ -885,7 +785,7 @@
                                                         <div class="cell">
                                                             <div data-type="chart" data-ptype="bars"
                                                                 data-style="ftui l0fill" data-logdevice="logdb"
-                                                                data-device="balkonkraftwerk" 
+                                                                data-device="balkonkraftwerk"
                                                                 data-columnspec="balkonkraftwerk:sum_day_sendData"
                                                                 data-logfile="history" data-yunit="Watt"
                                                                 data-daysago_start="2m" data-nofulldays="true"
@@ -900,38 +800,35 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                <!-- Popup Chart Jahresansicht-->
-                                <div class="row">
-                                    <div class="cell center-align">
+                    <!-- Popup Chart Jahresansicht-->
+                    <div class="row">
+                        <div class="cell">
+                            <!-- Chart als kleine Ansicht zum Anklicken -->
+                            <div data-type="popup" data-width="90%" data-height="70%">
+                                <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
+                                    data-title="Jahresansicht" data-logdevice="logdb" data-logfile="history"
+                                    data-style="ftui l0fill" class="nobuttons" data-daysago_start="6m"
+                                    data-daysago_end="-2" data-nofulldays="true"
+                                    data-columnspec="balkonkraftwerk:sum_month_sendData" data-minvalue="0"
+                                    data-maxvalue="auto" data-width="180" data-height="120"></div>
+                                <div class="dialog">
 
-                                        <!-- Chart als kleine Ansicht zum Anklicken -->
-                                        <div data-type="popup" data-width="90%" data-height="70%">
-                                            <div data-type="chart" data-ptype="bars" data-device="balkonkraftwerk"
-                                                data-title="Jahresansicht" data-logdevice="logdb" data-logfile="history"
-                                                data-style="ftui l0fill" class="nobuttons" data-daysago_start="6m"
-                                                data-daysago_end="-2" data-nofulldays="true"
-                                                data-columnspec="balkonkraftwerk:sum_month_sendData" data-minvalue="0"
-                                                data-maxvalue="auto" data-width="140" data-height="85"></div>
-                                            <div class="dialog">
-
-                                                <!-- Geöffnetes Popup mit Chart -->
-                                                <header>Jahresansicht</header>
-                                                <div class="sheet-90">
-                                                    <div class="row">
-                                                        <div class="cell">
-                                                            <div data-type="chart" data-ptype="bars"
-                                                                data-style="ftui l0fill" data-logdevice="logdb"
-                                                                data-device="balkonkraftwerk" 
-                                                                data-columnspec="balkonkraftwerk:sum_month_sendData"
-                                                                data-logfile="history" data-yunit="Watt"
-                                                                data-daysago_start="6m" data-nofulldays="true"
-                                                                data-daysago_end="-2" data-timeformat="MMM.yy"
-                                                                data-crosshair="true" data-minvalue="0"
-                                                                data-maxvalue="auto" class="fullsize">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    <!-- Geöffnetes Popup mit Chart -->
+                                    <header>Jahresansicht</header>
+                                    <div class="sheet-90">
+                                        <div class="row">
+                                            <div class="cell">
+                                                <div data-type="chart" data-ptype="bars" data-style="ftui l0fill"
+                                                    data-logdevice="logdb" data-device="balkonkraftwerk"
+                                                    data-columnspec="balkonkraftwerk:sum_month_sendData"
+                                                    data-logfile="history" data-yunit="Watt" data-daysago_start="6m"
+                                                    data-nofulldays="true" data-daysago_end="-2"
+                                                    data-timeformat="MMM.yy" data-crosshair="true" data-minvalue="0"
+                                                    data-maxvalue="auto" class="fullsize">
                                                 </div>
                                             </div>
                                         </div>
